@@ -1,10 +1,13 @@
 import React from 'react';
 import MainLayout from '../components/Layout/MainLayout';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <MainLayout activePage="home" showDashboardSidebar showTopbar>
-      <p className='text-6xl'>Home Page</p>
+      <div className="p-4">
+        <h1 className="text-2xl font-bold text-red-500">Home Page</h1>
+        <p>Welcome to the Home Page!</p>
+      </div>
     </MainLayout>
   );
 };
