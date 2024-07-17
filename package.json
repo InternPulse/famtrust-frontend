@@ -28,5 +28,9 @@
     "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
-  }
+  },
+  "description": "This is a `Vite, React and Tailwindcss` project.",
+  "main": "postcss.config.js",
+  "author": "",
+  "license": "ISC"
 }
