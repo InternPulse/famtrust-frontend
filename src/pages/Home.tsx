@@ -2,9 +2,8 @@ import React from 'react';
 import MainLayout from '../components/Layout/MainLayout';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-<<<<<<< HEAD:src/pages/Home.tsx
     <MainLayout  activePage="home" showDashboardSidebar showTopbar>
       <div className='w-10/12 relative m-auto pl-10 pt-10'><p className='text-6xl'>Home Page</p>
       <div className='mt-10'>
@@ -19,13 +18,6 @@ const Home = () => {
       </div>
       
       
-=======
-    <MainLayout activePage="home" showDashboardSidebar showTopbar>
-      <div className="p-4">
-        <h1 className="text-2xl font-bold text-red-500">Home Page</h1>
-        <p>Welcome to the Home Page!</p>
-      </div>
->>>>>>> ba74089d87652c359ace81480fc70e54108acb85:src/pages/Home.jsx
     </MainLayout>
   );
 };
