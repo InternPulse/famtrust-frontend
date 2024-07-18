@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "date": "11th july",
+      "Amount": "#2000",
+      "Description": "Olawale Johanna",
+      "Categoty": "Data",
+      "ID": 1001,
+      "status": "pending"
+    },
+    {
+      "date": "10th july",
+      "Amount": "#500",
+      "Description": "MTN Airtime",
+      "Categoty": "Data",
+      "ID": 1002,
+      "status": "Approved"
+    },
+    {
+      "date": "8th july",
+      "Amount": "#2000",
+      "Description": "Mustapha Glory",
+      "Categoty": "Groceries",
+      "ID": 1003,
+      "status": "Approved"
+    },
+    {
+      "date": "8th july",
+      "Amount": "#2000",
+      "Description": "Prestige Stores",
+      "Categoty": "Groceries",
+      "ID": 1004,
+      "status": "Declined"
+    },
+    {
+      "date": "1th july",
+      "Amount": "#1000",
+      "Description": "John Chukwu",
+      "Categoty": "Shopping",
+      "ID": 1005,
+      "status": "Approved"
+    }
+  ]
+}
