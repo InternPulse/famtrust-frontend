@@ -31,16 +31,13 @@ pnpm dev
 
 - `src/assets`: Static assets like images.
 - `src/components`: React components.
-- `src/helpers`: Custom authentication handlers (`withAuth.tsx`, `withoutAuth.tsx`).
+- `src/helpers`: Custom authentication handlers (`withAuth.jsx`, `withoutAuth.jsx`).
 - `src/http`: Axios setup and API call handlers.
 - `src/pages`: Application pages.
 - `src/services`: Services like API integrations.
-- `src/styles`: Global styles (`tailwind.css`).
-- `src/types`: TypeScript types.
-
-## Types
-
-As you know by now that this is a typescript based project. Please all types must be created separately in the `type` or `@types` directly outside of the componentss folder. If your components require a custom type, create them inside a folder called `types` or `@types` and export it to be used somewhere else.
+- `App.jsx`
+- `index.css`: Global Styles.
+- `main.jsx`
 
 # Commit Standards
 
@@ -94,14 +91,14 @@ Under any circumstances should you merge a pull request on a specific branch to 
 
 ### API Calls
 
-A separate folder called `http` which contains `axios.ts` and `index.ts` files where created to handle any outgoing or incoming http request/response. the `index.ts` file should contain all outgoing `API` calls to the backend server.
+A separate folder called http contains axios.js and index.js files to handle any outgoing or incoming HTTP requests/responses. The index.js file should contain all outgoing API calls to the backend server.
 
-> ❗❗Do not create any custom http calls inside a page or components. Whatever calls need to be processed by the server should be called within the `index.ts` file.
+> ❗❗Do not create any custom http calls inside a page or components. Whatever calls need to be processed by the server should be called within the `index.js` file.
 ### Custom Authentication Handler
 
-Within the `helpers` folder contains **two** different files called `withAuth.tsx` and `withoutAuth.tsx`.
+Within the `helpers` folder contains **two** different files called `withAuth.js` and `withoutAuth.js`.
 
-- **WithAuth.tsx** :- contains two `HOF` called `withUserAuth` and `withAdminAuth` which are functions that wrap every component that needs protection or protected route components for user and admin respectively. for eg `Dashboard` or any other page that require the user to be loggedIn. All you have to do is import the cusstom handler and wrap your component inside it. i.e
+- **WithAuth.jsx** :- contains two `HOF` called `withUserAuth` and `withAdminAuth` which are functions that wrap every component that needs protection or protected route components for user and admin respectively. for eg `Dashboard` or any other page that require the user to be loggedIn. All you have to do is import the cusstom handler and wrap your component inside it. i.e
 
 ```js
 withUserAuth(Dashboard);
@@ -115,32 +112,38 @@ withAdminAuth(AnalyticsAndReportingLayouts);
 withAdminAuth(SanctionedProducts);
 ```
 
-- **WithoutAuth.tsx** :- is the opposite of `withAuth.tsx` HOF. It only meant to be used to prevent loggedIn users from redirecting or navigating to a page. i.e when a user is loggedIn and you dont want them to view a certain page, use this function.
+- **WithoutAuth.jsx** :- is the opposite of `withAuth.jsx` HOF. It only meant to be used to prevent loggedIn users from redirecting or navigating to a page. i.e when a user is loggedIn and you dont want them to view a certain page, use this function.
 
 ```js
 withoutAuth(Login);
 withoutAuth(Signup);
 ```
 
-### MainLayout.tsx
+### MainLayout.jsx
 
 Within this file contains a `MainLayout` component, rather than calling `Footer`, `Sidebar`, `TopBar` component on every file manually, all you have to do is first invoke the `<MainLayout>` component inside any page before adding the children of that page.
 
 for eg
 
 ```js
-import Link from 'next/link';
-import MainLayout from '../components/Layout/MainLayout';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import MainLayout from './components/Layout/MainLayout';
 
-function Home() {
+function App() {
   return (
-    <MainLayout activePage="home" showDashboardSidebar showTopbar>
-      <p className="text-dark-100">Home Page</p>
-    </MainLayout>
+    <Router>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </MainLayout>
+    </Router>
   );
 }
 
-export default Home;
+export default App;
 ```
 
 You also get to decide whether to show the footer or sidebar using the available props.
