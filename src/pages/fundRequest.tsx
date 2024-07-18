@@ -11,7 +11,7 @@ const FundRequest = () => {
   const submitClick = (event) => {
     event.preventDefault();
 
-    setSearch('');
+    setSearch('')
     setRequest('');
     setEmail('');
     setAmount('');
@@ -30,7 +30,7 @@ const FundRequest = () => {
             placeholder="search"
             value={search}
             onChange={(event) => {
-              setSearch(event.target.value);
+                setSearch(event.target.value)
             }}
           />
           <img src="" alt="icon" />
