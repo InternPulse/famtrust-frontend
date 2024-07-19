@@ -7,7 +7,7 @@ function App() {
   return (
     
     <Router>
-      <MainLayout>
+      <MainLayout showDashboardSidebar={true}>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
