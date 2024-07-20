@@ -5,10 +5,16 @@ import Footer from '../Footer';
 
 const MainLayout = ({ children, activePage, showDashboardSidebar, showTopbar }) => {
   return (
-    <div>
+    <div className='flex'>
+      <div className='flex w-2/5 lg:w-1/4'>
       {showTopbar && <TopBar />}
       {showDashboardSidebar && <Sidebar />}
-      <main>{children}</main>
+      </div>
+      <div className='flex flex-1 h-screen justify-center'>
+      <main className='flex justify-center items-center'>
+        {children}
+        </main>
+      </div>
       <Footer />
     </div>
   );

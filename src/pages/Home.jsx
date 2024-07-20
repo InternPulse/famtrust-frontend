@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <MainLayout activePage="home" showDashboardSidebar showTopbar>
-      <div className="p-4">
+    <MainLayout activePage="home" >
+      <div className="p-4 flex ">
         <h1 className="text-2xl font-bold text-red-500">Home Page</h1>
         <p>Welcome to the Home Page!!</p>
       </div>
