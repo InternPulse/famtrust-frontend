@@ -3,13 +3,19 @@ import TopBar from '../TopBar';
 import Sidebar from '../Sidebar';
 import Footer from '../Footer';
 
-const MainLayout = ({ children, activePage, showDashboardSidebar, showTopbar }) => {
+const MainLayout = ({ children, showDashboardSidebar, showTopbar }) => {
   return (
-    <div>
-      {showTopbar && <TopBar />}
+    <div className="flex flex-row">
+      <div className='w-1/3 lg:w-1/4 flex-none'>
       {showDashboardSidebar && <Sidebar />}
-      <main>{children}</main>
-      <Footer />
+      </div>
+      <div className="flex-1 flex flex-col">
+        <div className=''>
+        {showTopbar && <TopBar />}
+        </div>
+        <main className=''>{children}</main>
+        <Footer />
+      </div>
     </div>
   );
 };
