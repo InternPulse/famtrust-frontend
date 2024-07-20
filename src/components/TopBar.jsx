@@ -4,6 +4,7 @@ const TopBar = () => {
   return (
     <div className="topbar">
       {/* TopBar content */}
+      topbar
     </div>
   );
 };

@@ -7,8 +7,11 @@ const MainLayout = ({ children, activePage, showDashboardSidebar, showTopbar }) 
   return (
     <div>
       {showTopbar && <TopBar />}
+      <div className="flex ">
+
       {showDashboardSidebar && <Sidebar />}
       <main>{children}</main>
+      </div>
       <Footer />
     </div>
   );
