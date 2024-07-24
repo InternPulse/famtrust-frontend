@@ -1,14 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainLayout from './components/Layout/MainLayout';
 import Home from './pages/Home';
+import MainLayout from './components/Layout/MainLayout';
+import TopBar from './components/TopBar';
+import Transaction from './pages/transaction';
+import FundRequest from './pages/fundRequest';
+import Submit from './pages/submit';
+import NewsLetter from './pages/newsLetter';
 
 function App() {
   return (
     <Router>
-      <MainLayout showDashboardSidebar={true} showTopbar={true}>
+      <MainLayout>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Routes>
+          <Route path="/transaction.jsx" element={<Transaction />} />
+          <Route path="/fundRequest.jsx" element={<FundRequest />} />
+          <Route path="/submit.jsx" element={<Submit />} />
+          <Route path="/newsLetter.jsx" element={<NewsLetter />} />
         </Routes>
       </MainLayout>
     </Router>
