@@ -5,8 +5,7 @@ import { GrLineChart } from "react-icons/gr";
 import { IoMdNotifications } from "react-icons/io";
 import { IoMdSettings } from "react-icons/io";
 import { BsBarChartFill } from "react-icons/bs";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const Sidebar = () => {
     // State to manage the open/closed state of dropdown menus
@@ -77,7 +76,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="bg-sidebar-bg text-text-color w-2/5 lg:w-1/4 h-full fixed flex flex-col items-center font-bold">
+        <div className="bg-darkGrey text-text-color w-1/3 lg:w-1/4 h-full fixed flex flex-col items-center font-bold">
             <div className="w-full text-center">
                 <img src="src/assets/FamTrustlogo.png" alt="FamTrust Logo" className="pl-6 pr-12 py-5 lg:pl-10 lg:pr-16" />
                 <hr className='w-full' />
@@ -90,7 +89,7 @@ const Sidebar = () => {
                         <div className="flex justify-between items-center cursor-pointer hover:text-hover-text hover:bg-hover-bg hover:rounded hover:px-2.5 hover:py-2 lg:space-x-16 hover:font-medium" key={index}>
                             <ul className="flex items-center space-x-2">
                                 <li>{item.icon}</li>
-                                <li>{item.label}</li>
+                                <li><a href={item.href}>{item.label}</a></li>
                             </ul>
                             {openDropdown === index ? <IoIosArrowUp className='text-2xl' /> : <IoIosArrowDown className='text-2xl' />}
                         </div>

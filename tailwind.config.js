@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'sidebar-bg': '#C0BDFF',
+        'darkGrey': '#C0BDFF',
         'hover-bg': '#4567F7',
         'text-color': '#14183B',
         'hover-text': '#F9F8FF',
