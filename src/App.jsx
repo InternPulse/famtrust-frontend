@@ -3,14 +3,23 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainLayout from './components/Layout/MainLayout';
 import Home from './pages/Home';
 import Overview from './components/overview/overview';
+import LandingPage from './pages/LandingPage';
+
 
 function App() {
   return (
     <Router>
-      <MainLayout showDashboardSidebar={true} showTopbar={true}>
-        <Routes>
-          <Route path="/" element={<Home />} /> {/* Add this line */}
-          <Route
+      <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route
+          path="/home"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <Home />
+            </MainLayout>
+          }
+        />
+         <Route
             path="/overview"
             element={
               <div
@@ -24,9 +33,8 @@ function App() {
               </div>
             }
           />
-          <Route path="/home" element={<Home />} />
-        </Routes>
-      </MainLayout>
+        {/* Add other routes here */}
+      </Routes>
     </Router>
   );
 }
