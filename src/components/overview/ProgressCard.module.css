@@ -1,0 +1,61 @@
+/* ProgressCard.module.css */
+.progressCard {
+  display: flex;
+  height: 245px;
+  padding: 24px 0;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid var(--Neutral-7, #e2e2e2);
+  background: var(--Color-Style-Primary-Roles-On-Pri-color, #f9f8ff);
+}
+
+.progressCardContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.progressImageContainer {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-right: 16px; /* Adjust as needed */
+  margin-left: 48px;
+}
+
+.profileImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; /* Adjusted for 20x20 profile image */
+  height: 80px; /* Adjusted for 20x20 profile image */
+  border-radius: 50%;
+}
+
+.monthly-income {
+  color: #2e2e30;
+  font-family: Lato, sans-serif; /* Adding sans-serif as a fallback */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.amount {
+  color: var(--Color-Style-Primary-Roles-Pri-variant, #2452d6);
+  font-family: Lato, sans-serif; /* Adding sans-serif as a fallback */
+  font-size: 14px;
+  font-style: normal;
+  margin-left: 4px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.progressCard hr {
+  border: none;
+  border-top: 1px solid #e5e7eb; /* Or any color you prefer */
+  margin: 1rem 0; /* Adjust the spacing as needed */
+}
