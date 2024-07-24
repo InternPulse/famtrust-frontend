@@ -4,15 +4,15 @@ import Sidebar from '../Sidebar';
 
 const MainLayout = ({ children, showDashboardSidebar, showTopbar }) => {
   return (
-    <div className="flex flex-row">
-      <div className='w-1/3 lg:w-1/4 flex-none'>
+    <div className='flex'>
+      <div className='flex w-2/5 lg:w-1/4'>
+      {showTopbar && <TopBar />}
       {showDashboardSidebar && <Sidebar />}
       </div>
-      <div className="flex-1 flex flex-col">
-        <div className=''>
-        {showTopbar && <TopBar />}
-        </div>
-        <main className=''>{children}</main>
+      <div className='flex flex-1 h-screen justify-center'>
+      <main className='flex justify-center items-center'>
+        {children}
+        </main>
       </div>
     </div>
   );

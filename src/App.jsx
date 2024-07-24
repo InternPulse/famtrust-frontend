@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import MainLayout from './components/Layout/MainLayout';
+import SubAccountCard from './components/SubaccountCard';
+import SubAccountList from './pages/SubAccountList';
+import SubAccountInfo from './pages/SubAccountInfo';
 import TopBar from './components/TopBar';
 import Transaction from './pages/transaction';
 import FundRequest from './pages/fundRequest';
@@ -24,6 +27,7 @@ function App() {
             </MainLayout>
           }
         />
+        <Route path="/sub" element={<SubAccountInfo />} />
         <Route
             path="/overview"
             element={

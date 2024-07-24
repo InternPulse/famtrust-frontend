@@ -29,6 +29,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
+
     <MainLayout activePage="home" showDashboardSidebar showTopbar>
       <div className="w-10/12 relative m-auto pl-10 pt-10 text-center">
         <p className="text-6xl font-bold">Home Page</p>
