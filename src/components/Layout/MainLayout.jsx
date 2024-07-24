@@ -1,7 +1,6 @@
 import React from 'react';
 import TopBar from '../TopBar';
 import Sidebar from '../Sidebar';
-import Footer from '../Footer';
 
 const MainLayout = ({ children, showDashboardSidebar, showTopbar }) => {
   return (
@@ -14,7 +13,6 @@ const MainLayout = ({ children, showDashboardSidebar, showTopbar }) => {
         {showTopbar && <TopBar />}
         </div>
         <main className=''>{children}</main>
-        <Footer />
       </div>
     </div>
   );
