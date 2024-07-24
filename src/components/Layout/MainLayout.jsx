@@ -1,15 +1,19 @@
 import React from 'react';
 import TopBar from '../TopBar';
 import Sidebar from '../Sidebar';
-import Footer from '../Footer';
 
-const MainLayout = ({ children, activePage, showDashboardSidebar, showTopbar }) => {
+const MainLayout = ({ children, showDashboardSidebar, showTopbar }) => {
   return (
-    <div>
+    <div className='flex'>
+      <div className='flex w-2/5 lg:w-1/4'>
       {showTopbar && <TopBar />}
       {showDashboardSidebar && <Sidebar />}
-      <main>{children}</main>
-      <Footer />
+      </div>
+      <div className='flex flex-1 h-screen justify-center'>
+      <main className='flex justify-center items-center'>
+        {children}
+        </main>
+      </div>
     </div>
   );
 };
