@@ -2,7 +2,7 @@
 import PassWordRecovery from "./PassWordRecovery";
 import PassWordReset from "./PassWordReset";
 import { useNavigate } from "react-router-dom";
-import login from "/login.png";
+import login from "/src/assets/login.png";
 import { useState } from "react";
 
 const Recovery = () => {
