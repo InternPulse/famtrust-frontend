@@ -25,8 +25,27 @@ module.exports = {
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
+        "montesarrat": "Montserrat Alternates"
+        
+              
       },
+      backgroundImage:{
+        "bg": "url('/herobg.png')"
+      },
+      backgroundColor: {
+        "bluey": "#4567F7",
+        "neutrall": "#F9F9F9",
+        "purp" : "#E2DDFF"
+      },
+      textColor:{
+        "txtblue": "#4567F7",
+      },
+
     },
   },
   plugins: [],
 };
+
+
+
+
