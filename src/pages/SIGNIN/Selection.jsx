@@ -1,6 +1,6 @@
 
 // import { BiBullseye } from "react-icons/bi";
-import Button from "../../components/Button"
+import Button from '../../components/Button';
 
 const Selection = ({onClickHandler}) => {
   return (

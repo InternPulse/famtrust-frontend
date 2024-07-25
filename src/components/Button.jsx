@@ -1,5 +1,3 @@
-
-
 const Button = ({children}) => {
   return (
     <div className="py-2">

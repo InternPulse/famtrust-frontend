@@ -13,13 +13,13 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
-import Header from './components/Header';
+
 
 
 function App() {
   return (
     <Router>
-      <Header/>
+      
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route
@@ -43,7 +43,7 @@ function App() {
         }
         />
         <Route path="signup" element={<SignUpPage/>} />
-        <Route path="signup" element={<Recovery/>} />
+        <Route path="recovery" element={<Recovery/>} />
         
         
 
@@ -51,8 +51,9 @@ function App() {
         <Route
           path="/overview"
           element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
             <div
-              className="flex-col h-screen w-[100%] overflow-auto"
+              className="flex-col h-screen  overflow-none"
               style={{
                 backgroundColor:
                   'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
@@ -60,10 +61,10 @@ function App() {
             >
               <Overview />
             </div>
+            </MainLayout>
           }
         />
 
-        <Route path="/services.jsx" element={<Services />} />
         {/* Add other routes here */}
 
         <Route path="/transaction-history" element={
@@ -72,6 +73,7 @@ function App() {
           </MainLayout>
         }
         />
+
         <Route path="/fund-request"
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>

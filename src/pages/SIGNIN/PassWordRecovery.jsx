@@ -1,4 +1,4 @@
-import Button from "../../components/Button";
+import Button from '../../components/Button';
 // import { NavLink } from "react-router-dom";
 
 const PassWordRecovery = ({ clickRecovery }) => {
