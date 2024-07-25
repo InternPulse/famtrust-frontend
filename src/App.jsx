@@ -12,8 +12,8 @@ import Submit from './pages/submit';
 import NewsLetter from './pages/newsLetter';
 import Overview from './components/overview/overview';
 import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/SIGNIN/LoginPage';
 
-import SignUpPage from './pages/SIGNUP/SignUpPage';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
             </MainLayout>
           }
         />
-        <Route path="signup" element={<SignUpPage />}></Route>
+        <Route path="login" element={<LoginPage />}></Route>
         <Route path="/sub" element={<SubAccountInfo />} />
         <Route
             path="/overview"
