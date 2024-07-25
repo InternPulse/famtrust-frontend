@@ -43,8 +43,9 @@ function App() {
         <Route
           path="/overview"
           element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
             <div
-              className="flex-col h-screen w-[100%] overflow-auto"
+              className="flex-col h-screen  overflow-none"
               style={{
                 backgroundColor:
                   'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
@@ -52,10 +53,10 @@ function App() {
             >
               <Overview />
             </div>
+            </MainLayout>
           }
         />
 
-        <Route path="/services.jsx" element={<Services />} />
         {/* Add other routes here */}
 
         <Route path="/transaction-history" element={
