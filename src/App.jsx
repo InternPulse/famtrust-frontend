@@ -10,12 +10,13 @@ import FundRequest from './pages/fundRequest';
 import Submit from './pages/submit';
 import Overview from './components/overview/Overview';
 import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/SIGNIN/LoginPage';
 
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route
@@ -26,12 +27,17 @@ function App() {
             </MainLayout>
           }
         />
+
         <Route path="/sub-account-list" element={
           <MainLayout showDashboardSidebar={true} showTopbar={true}>
               <SubAccountList />
             </MainLayout>
         }
         />
+
+        <Route path="login" element={<LoginPage />}></Route>
+        
+
         <Route
           path="/overview"
           element={ 
@@ -56,7 +62,8 @@ function App() {
         <Route path="/submit.jsx" element={<Submit />} />
         {/* Add other routes here */}
       </Routes>
-    </Router>
+    </BrowserRouter>
+
   );
 }
 
