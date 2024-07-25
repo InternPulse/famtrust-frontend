@@ -1,4 +1,4 @@
-// import Button from "../Component/Button";
+import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
@@ -27,7 +27,7 @@ const Login = ({onClickHandler}) => {
             <NavLink className="text-txtblue " to="/recovery">Forgot Password?</NavLink>
             </div>
             <div onClick={onClickHandler} >
-            {/* <Button>SIGN IN</Button> */}
+            <Button>SIGN IN</Button>
             </div>
             <p className="text-center font-lato text-base font-normal pb-3">You dont have an account? <a className="text-txtblue" href="signup">Sign up</a></p>
         </form>

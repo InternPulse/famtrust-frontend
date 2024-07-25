@@ -11,6 +11,8 @@ import Submit from './pages/submit';
 import Overview from './components/overview/Overview';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
+import SignUpPage from './pages/SIGNUP/SignUpPage';
+import Recovery from './pages/SIGNIN/Recovery';
 
 
 function App() {
@@ -38,6 +40,10 @@ function App() {
           <LoginPage />
         }
         />
+        <Route path="signup" element={<SignUpPage/>} />
+        <Route path="signup" element={<Recovery/>} />
+        
+        
 
 
         <Route
