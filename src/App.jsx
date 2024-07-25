@@ -15,7 +15,6 @@ import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
 
 
-
 function App() {
   return (
     <Router>
@@ -50,11 +49,21 @@ function App() {
         <Route
           path="/overview"
           element={
-            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+            <div
+              className="flex-col h-screen w-[100%] overflow-auto"
+              style={{
+                backgroundColor:
+                  'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
+              }}
+            >
               <Overview />
-            </MainLayout>
+            </div>
           }
         />
+
+        <Route path="/services.jsx" element={<Services />} />
+        {/* Add other routes here */}
+
         <Route path="/transaction-history" element={
           <MainLayout showDashboardSidebar={true} showTopbar={true}>
             <Transaction />
