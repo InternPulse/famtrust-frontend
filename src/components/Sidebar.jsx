@@ -79,7 +79,7 @@ const Sidebar = () => {
         <div className="bg-darkGrey text-text-color w-1/3 lg:w-1/4 h-full fixed flex flex-col items-center font-bold">
             <div className="w-full text-center">
                 <img src="src/assets/FamTrustlogo.png" alt="FamTrust Logo" className="pl-6 pr-12 py-5 lg:pl-10 lg:pr-16" />
-                <hr className='w-full' />
+                <hr className='w-full text-white' />
             </div>
 
             <nav className="font-bold text-sm space-y-4 mt-16 text-center justify-between">
