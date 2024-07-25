@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import MainLayout from './components/Layout/MainLayout';
 // import SubAccountCard from './components/SubaccountCard';
 import SubAccountList from './pages/SubAccountList';
-import SubAccountInfo from './pages/SubAccountInfo';
+// import SubAccountInfo from './pages/SubAccountInfo';
 import Transaction from './pages/transaction';
 import FundRequest from './pages/fundRequest';
 import Submit from './pages/submit';
@@ -16,7 +16,7 @@ import LoginPage from './pages/SIGNIN/LoginPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route
@@ -30,27 +30,30 @@ function App() {
 
         <Route path="/sub-account-list" element={
           <MainLayout showDashboardSidebar={true} showTopbar={true}>
-              <SubAccountList />
-            </MainLayout>
+            <SubAccountList />
+          </MainLayout>
         }
         />
 
-        <Route path="login" element={<LoginPage />}></Route>
-        
+        <Route path="/login" element={
+          <LoginPage />
+        }
+        />
+
 
         <Route
           path="/overview"
-          element={ 
+          element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
               <Overview />
             </MainLayout>
           }
         />
         <Route path="/transaction-history" element={
-            <MainLayout showDashboardSidebar={true} showTopbar={true}>
-              <Transaction />
-            </MainLayout>
-          }
+          <MainLayout showDashboardSidebar={true} showTopbar={true}>
+            <Transaction />
+          </MainLayout>
+        }
         />
         <Route path="/fund-request"
           element={
@@ -62,7 +65,7 @@ function App() {
         <Route path="/submit.jsx" element={<Submit />} />
         {/* Add other routes here */}
       </Routes>
-    </BrowserRouter>
+    </Router>
 
   );
 }
