@@ -12,11 +12,12 @@ import Submit from './pages/submit';
 import NewsLetter from './pages/newsLetter';
 import Overview from './components/overview/overview';
 import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/SIGNIN/LoginPage';
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route
@@ -27,6 +28,7 @@ function App() {
             </MainLayout>
           }
         />
+        <Route path="login" element={<LoginPage />}></Route>
         <Route path="/sub" element={<SubAccountInfo />} />
         <Route
             path="/overview"
@@ -48,7 +50,8 @@ function App() {
           <Route path="/newsLetter.jsx" element={<NewsLetter />} />
         {/* Add other routes here */}
       </Routes>
-    </Router>
+    </BrowserRouter>
+
   );
 }
 
