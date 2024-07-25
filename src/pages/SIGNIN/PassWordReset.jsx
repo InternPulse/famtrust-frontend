@@ -1,5 +1,5 @@
 
-// import Button from "../Component/Button";
+import Button from "../../components/Button";
 
 const PassWordReset = ({ clickRecovery }) => {
   return (
@@ -36,7 +36,7 @@ const PassWordReset = ({ clickRecovery }) => {
           />
         </div>
         <div className="my-3" onClick={clickRecovery}>
-          {/* <Button>Reset Password</Button> */}
+          <Button>Reset Password</Button>
         </div>
       </form>
     </div>

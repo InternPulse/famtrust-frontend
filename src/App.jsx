@@ -13,11 +13,13 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <Router>
+      <Header/>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route

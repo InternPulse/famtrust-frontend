@@ -1,5 +1,5 @@
 
-// import Button from '../Component/Button'
+import Button from "../../components/Button"
 
 const TwoFactor = ({onClickHandler}) => {
   return (
@@ -10,7 +10,7 @@ const TwoFactor = ({onClickHandler}) => {
             <input className='w-full py-2 rounded-xl border-[1px]' type="tel" placeholder='Enter OTP' />
         </form>
         <div className='md:my-16 my-8' onClick={onClickHandler}>
-            {/* <Button>Submit</Button> */}
+            <Button>Submit</Button>
         </div>
 
       
