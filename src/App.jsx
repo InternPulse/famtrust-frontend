@@ -14,7 +14,6 @@ import Overview from './components/overview/overview';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -31,27 +30,27 @@ function App() {
         <Route path="login" element={<LoginPage />}></Route>
         <Route path="/sub" element={<SubAccountInfo />} />
         <Route
-            path="/overview"
-            element={
-              <div
-                className="flex-col h-screen w-[100%] overflow-auto"
-                style={{
-                  backgroundColor:
-                    'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
-                }}
-              >
-                <Overview />
-              </div>
-            }
-          />
-          <Route path="/transaction.jsx" element={<Transaction />} />
-          <Route path="/fundRequest.jsx" element={<FundRequest />} />
-          <Route path="/submit.jsx" element={<Submit />} />
-          <Route path="/newsLetter.jsx" element={<NewsLetter />} />
+          path="/overview"
+          element={
+            <div
+              className="flex-col h-screen w-[100%] overflow-auto"
+              style={{
+                backgroundColor:
+                  'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
+              }}
+            >
+              <Overview />
+            </div>
+          }
+        />
+        <Route path="/transaction.jsx" element={<Transaction />} />
+        <Route path="/services.jsx" element={<Services />} />
+        <Route path="/fundRequest.jsx" element={<FundRequest />} />
+        <Route path="/submit.jsx" element={<Submit />} />
+        <Route path="/newsLetter.jsx" element={<NewsLetter />} />
         {/* Add other routes here */}
       </Routes>
     </BrowserRouter>
-
   );
 }
 
