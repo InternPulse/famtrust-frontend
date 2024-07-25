@@ -18,3 +18,57 @@ body {
 .scroll {
   @apply border px-1  hover:bg-hover-bg;
 }
+
+.service-title {
+  color: var(--Color-Style-Surface-Roles-On-Surface-variant, #474747);
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+
+.service-description {
+  color: var(--Neutral-8, #777);
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.5px;
+}
+
+.service-card {
+  border-radius: 16px 16px 0px 0px;
+  border-bottom: 5px solid var(--Color-Style-Primary-Roles-Pri-color, #4567f7);
+  background: var(--Color-Style-Surface-Roles-On-Inverse-surface, #f1f1f1);
+  padding: 24px 16px;
+}
+
+.service-heading {
+  color: #000;
+  font-family: Lato, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 125% */
+}
+
+.service-icon-container {
+  background: var(
+    --Color-Style-Surface-Roles-On-Inverse-surface,
+    #f1f1f1
+  ); /* Match the card's background */
+
+  border-radius: 50%; /* Ensure circular background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon {
+  max-height: 100%; /* Ensure the image doesn't exceed the container size */
+  max-width: 100%; /* Ensure the image doesn't exceed the container size */
+}
