@@ -1,103 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import { IoMdNotificationsOutline } from 'react-icons/io';
-import { MdOutlineWifi, MdAttachMoney, MdTransferWithinAStation, MdPayment, MdLogout } from 'react-icons/md';
 import { AiOutlineBell } from 'react-icons/ai';
 import { useLocation } from 'react-router-dom';
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
+import { MdOutlineWifi, MdAttachMoney, MdTransferWithinAStation, MdPayment, MdLogout } from 'react-icons/md';
 
 const TopBar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(null); // State to manage dropdown open/close
-  const [activePage, setActivePage] = useState(''); // State to store the current page name
-  const [searchQuery, setSearchQuery] = useState(''); // State to manage the search input
-  const location = useLocation(); // Hook to get the current location
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [activePage, setActivePage] = useState('');
+  const location = useLocation();
 
-  // Update the active page name whenever the location changes
   useEffect(() => {
-    const pathName = location.pathname.split('/').filter(Boolean).join(' ');
-    setActivePage(pathName ? pathName.charAt(0).toUpperCase() + pathName.slice(1) : 'Home');
+    const pathSegments = location.pathname.split('/').filter(Boolean);
+    const pageTitle = pathSegments.length > 0 
+      ? pathSegments[pathSegments.length - 1].split('-').map(word => 
+          word.charAt(0).toUpperCase() + word.slice(1)
+        ).join(' ')
+      : 'Sub-Account List';
+    setActivePage(pageTitle);
   }, [location]);
 
-  // Handle search input change
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
-
-  // Handle search submission
-  const handleSearchSubmit = () => {
-    alert(`Searching for: ${searchQuery}`);
-    setSearchQuery('');
-  };
-
-  // Toggle dropdown menu
-  const toggleDropdown = (index) => {
-    setIsDropdownOpen(isDropdownOpen === index ? null : index);
-  };
-
-  // Configuration array for top bar items
-  const topbarItems = [
-    {
-      icon: <AiOutlineBell className="text-xl cursor-pointer" />,
-      label: '',
-    },
-    {
-      icon: <img src="src\assets\Ellipse 1.png" alt="Profile" className="h-8 w-8 rounded-full" />,
-      label: '',
-      dropdownItems: [
-        { label: 'Ritji Ishaku' },
-        { label: 'divider' },
-        { icon: <MdOutlineWifi />, label: 'Airtime & Data', href: '/airtime-data' },
-        { icon: <MdAttachMoney />, label: 'Fund Sub Account', href: '/fund-sub-account' },
-        { icon: <MdTransferWithinAStation />, label: 'Fund Transfer', href: '/fund-transfer' },
-        { icon: <MdPayment />, label: 'Pay Bill', href: '/pay-bill' },
-        { icon: <MdLogout />, label: 'Log out', href: '/logout' },
-      ],
-    },
-  ];
 
   return (
-    <div className="bg-white pt-8 pl-8 h-auto flex gap-20 lg:space-x-52 items-center">
-      {/* Display the current active page name */}
-      <div className="flex flex-row space-x-6 text-lg font-semibold">{activePage}</div>
-      <div className="flex flex-row space-x-10">
-        {/* Search input and button */}
+    <div className="bg-white w-full h-16 px-6 flex justify-between items-center border-b">
+      <h1 className="text-xl font-semibold">{activePage}</h1>
+      <div className="flex items-center space-x-6">
         <div className="relative">
           <input
             type="text"
-            value={searchQuery}
-            onChange={handleSearchChange}
             placeholder="Search"
-            className="border rounded-lg py-1 px-2 w-80 h-9"
+            className="border rounded-full py-2 px-4 w-64"
           />
         </div>
-        {/* Map through topbar items to create notifications and profile dropdowns */}
-        {topbarItems.map((item, index) => (
-          <div key={index} className="relative">
-            <div onClick={() => toggleDropdown(index)} className="flex items-center cursor-pointer space-x-2">
-              {item.icon}
-              <span className="font-semibold">{item.label}</span>
-              {isDropdownOpen === index ? <IoIosArrowUp /> : <IoIosArrowDown />}
-            </div>
-            {/* Render dropdown menu if open */}
-            {isDropdownOpen === index && item.dropdownItems.length > 0 && (
-              <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg">
-                {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                  dropdownItem.label === 'divider' ? (
-                    <hr key={dropdownIndex} className="my-2" />
-                  ) : (
-                    <a
-                      key={dropdownIndex}
-                      href={dropdownItem.href}
-                      className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer space-x-2"
-                    >
-                      <span>{dropdownItem.label}</span>
-                      {dropdownItem.icon}
-                    </a>
-                  )
-                ))}
-              </div>
-            )}
+        <AiOutlineBell className="text-2xl cursor-pointer" />
+        <div className="relative">
+          <div onClick={toggleDropdown} className="flex items-center cursor-pointer space-x-2">
+            <img src="/src/assets/Ellipse 1.png" alt="Profile" className="h-8 w-8 rounded-full" />
+            <IoIosArrowDown />
           </div>
-        ))}
+          {isDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4">
+              <div className="mb-2 font-semibold">Ritji Ishaku</div>
+              <div className="text-sm text-gray-500 mb-2">ritjiishaku@gmail.com</div>
+              <hr className="my-2" />
+              <a href="/airtime-data" className="flex items-center py-2 hover:bg-gray-100">
+                <MdOutlineWifi className="mr-2" /> Airtime & Data
+              </a>
+              <a href="/fund-sub-account" className="flex items-center py-2 hover:bg-gray-100">
+                <MdAttachMoney className="mr-2" /> Fund Sub Account
+              </a>
+              <a href="/fund-transfer" className="flex items-center py-2 hover:bg-gray-100">
+                <MdTransferWithinAStation className="mr-2" /> Fund Transfer
+              </a>
+              <a href="/pay-bill" className="flex items-center py-2 hover:bg-gray-100">
+                <MdPayment className="mr-2" /> Pay Bill
+              </a>
+              <a href="/logout" className="flex items-center py-2 hover:bg-gray-100">
+                <MdLogout className="mr-2" /> Log out
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
