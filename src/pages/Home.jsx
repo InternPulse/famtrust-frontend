@@ -1,12 +1,15 @@
 //Scroll down to see my custom Made homePage
 //click the button to navigate to both pages and everything works on the page
 
-import React from 'react';
+
 import MainLayout from '../components/Layout/MainLayout';
 import { Link } from 'react-router-dom';
+import Hero from '../components/Hero';
 
 const Home = () => {
   return (
+   <>
+    <Hero/>
     <MainLayout activePage="home">
       <div className="p-4 w-10/12 m-auto relative left-14">
         <h1 className="text-2xl font-bold text-red-500">Home Page</h1>
@@ -15,6 +18,7 @@ const Home = () => {
         <button></button>
       </div>
     </MainLayout>
+   </>
   );
 };
 
