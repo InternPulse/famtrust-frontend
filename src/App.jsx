@@ -41,7 +41,7 @@ function App() {
         }
         />
         <Route path="signup" element={<SignUpPage/>} />
-        <Route path="signup" element={<Recovery/>} />
+        <Route path="recovery" element={<Recovery/>} />
         
         
 
