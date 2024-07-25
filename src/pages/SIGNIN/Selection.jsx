@@ -1,6 +1,6 @@
 
 // import { BiBullseye } from "react-icons/bi";
-// import Button from '../Component/Button';
+import Button from "../../components/Button"
 
 const Selection = ({onClickHandler}) => {
   return (
@@ -33,7 +33,7 @@ const Selection = ({onClickHandler}) => {
       
         
         <div className='pb-4' onClick={onClickHandler}>
-        {/* <Button>Continue</Button> */}
+        <Button>Continue</Button>
         </div>
       
     </div>
