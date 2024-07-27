@@ -14,7 +14,7 @@ const Header = () => {
     setShow(false)
   }
   return (
-    <div className=" py-4">
+    <div className= {`py-4 ${clickShow && " overflow-hidden"} `}>
       <div className=" flex justify-between items-center bg-blueyy md:px-24 px-6">
         <div>
           <NavLink className="flex gap-1 items-center" to="/">
