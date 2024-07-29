@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
   background-color: #e2ddff;
@@ -15,9 +15,30 @@ body {
 } */
 
 .scroll {
-  @apply border px-1  hover:bg-primary-blue;
+  @apply border px-1  hover:bg-hover-bg;
 }
 
+.mt-4 {
+  color: #ababab;
+  font-family: Lato, sans-serif; /* Fallback to sans-serif if Lato is unavailable */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.5px;
+}
+
+.small-body-text {
+  color: var(--Neutral-8, #777);
+  font-family: Lato, sans-serif; /* Adding sans-serif as a fallback */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.4px;
+}
+
+/* Card.module.css or your main CSS file */
 .card-name {
   color: #000;
   font-family: Lato;
@@ -142,4 +163,12 @@ body {
 .service-icon {
   max-height: 100%; /* Ensure the image doesn't exceed the container size */
   max-width: 100%; /* Ensure the image doesn't exceed the container size */
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    .flex > div {
+      width: 100% !important;
+    }
+  }
 }

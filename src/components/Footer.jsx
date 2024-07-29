@@ -2,6 +2,7 @@ import React from 'react';
 import { IoLogoYoutube } from "react-icons/io";
 import { FaXTwitter, FaLinkedin, FaInstagram, FaPhone } from "react-icons/fa6";
 import { AiFillMail } from "react-icons/ai";
+import FamTrustLogo from '../assets/FamTrustlogo.png';
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <div className='bg-white h-auto w-auto rounded-2xl mb-4'>
-              <img src="src\assets\FamTrustlogo.png" alt="FamTrust Logo" className=" p-6" />
+              <img src={FamTrustLogo} alt="FamTrust Logo" className=" p-6" />
             </div>
           </div>
 
