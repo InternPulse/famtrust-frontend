@@ -1,10 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
+  background-color: #e2ddff;
   font-family: 'Lato', sans-serif;
-  background-color: #;
+}
+/* body .lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+} */
+
+.scroll {
+  @apply border px-1  hover:bg-primary-blue;
+}
+
+.card-name {
+  color: #000;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.25px;
+}
+
+.total-balance {
+  color: #ababab;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.25px;
+}
+
+.text-income {
+  color: var(
+    --Color-Style-Primary-Roles-Pri-variant,
+    #2452d6
+  ); /* Custom color or fallback */
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.date-text {
+  color: var(--Neutral-8, #777);
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+/* styles.css or relevant CSS file */
+.expense-label {
+  color: #000;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal; /* Regular weight */
+}
+
+@media (maxwidth: 768px) {
+  .profile-card {
+    width: 100%;
+    padding: 0; /* Remove padding on small screens */
+  }
+
+  .space-y-6 {
+    margin-top: 0; /* Remove vertical space on smaller screens */
+    margin-bottom: 0;
+  }
+
+  .space-x-6 {
+    margin-left: 0; /* Remove horizontal space on smaller screens */
+    margin-right: 0;
+  }
+
+  .progress-card {
+    width: 100%;
+    padding: 0; /* Remove padding on small screens */
+  }
+}
+
+.service-title {
+  color: var(--Color-Style-Surface-Roles-On-Surface-variant, #474747);
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+
+.service-description {
+  color: var(--Neutral-8, #777);
+  text-align: center;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.5px;
+}
+
+.service-card {
+  border-radius: 16px 16px 0px 0px;
+  border-bottom: 5px solid var(--Color-Style-Primary-Roles-Pri-color, #4567f7);
+  background: var(--Color-Style-Surface-Roles-On-Inverse-surface, #f1f1f1);
+  padding: 24px 16px;
+}
+
+.service-heading {
+  color: #000;
+  font-family: Lato, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 125% */
+}
+
+.service-icon-container {
+  background: var(
+    --Color-Style-Surface-Roles-On-Inverse-surface,
+    #f1f1f1
+  ); /* Match the card's background */
+
+  border-radius: 50%; /* Ensure circular background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon {
+  max-height: 100%; /* Ensure the image doesn't exceed the container size */
+  max-width: 100%; /* Ensure the image doesn't exceed the container size */
 }
