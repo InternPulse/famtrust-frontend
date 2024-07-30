@@ -8,25 +8,25 @@ const SignUp = ({onClickHandler}) => {
         <h1 className="text-txtblue text-center font-lato text-xl font-bold py-4">Enter Additional Details</h1>
        
         <form action="">
-            <div>
+            <div className="py-2">
                 <label className="font-lato text-base font-semibold" htmlFor="username">First Name</label>
-                <input className="w-full py-2 rounded-xl border-[1px] mt-3 border-slate-700" type="text" name="username" id="username" />
+                <input className="w-full py-2 rounded-xl border-[1px]  border-slate-700" type="text" name="username" id="username" />
             </div>
-            <div>
+            <div className="py-2" >
                 <label className="font-lato text-base font-semibold" htmlFor="username">Last Name</label>
-                <input className="w-full py-2 rounded-xl border-[1px] mt-3 border-slate-700" type="text" name="username" id="username" />
+                <input className="w-full py-2 rounded-xl border-[1px] border-slate-700" type="text" name="username" id="username" />
             </div>
-            <div>
+            <div className="py-2">
                 <label className="font-lato text-base font-semibold" htmlFor="username">BVN/NIN</label>
-                <input className="w-full py-2 rounded-xl border-[1px] mt-3 border-slate-700" type="text" name="username" id="username" />
+                <input className="w-full py-2 rounded-xl border-[1px] border-slate-700" type="text" name="username" id="username" />
             </div>
-            <div>
+            <div className="py-2">
                 <label className="font-lato text-base font-semibold" htmlFor="username">Email</label>
-                <input className="w-full py-2 rounded-xl border-[1px] mt-3 border-slate-700" type="text" name="username" id="username" />
+                <input className="w-full py-2 rounded-xl border-[1px] border-slate-700" type="text" name="username" id="username" />
             </div>
-            <div>
+            <div className="py-2">
                 <label className="font-lato text-base font-semibold" htmlFor="username">Phone Number</label>
-                <input className="w-full py-2 rounded-xl border-[1px] mt-3 border-slate-700" type="text" name="username" id="username" />
+                <input className="w-full py-2 rounded-xl border-[1px] border-slate-700" type="text" name="username" id="username" />
             </div>
            
             

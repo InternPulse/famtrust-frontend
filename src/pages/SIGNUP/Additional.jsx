@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 const Additional = ({onClickHandler}) => {
   return (
-    <div className="md:px-24 px-6">
+    <div className="md:px- 16 py-4 px-6 w-[50%]">
       
         <MdEmail className='text-3xl text-center mr-2 pt-2'/>
         

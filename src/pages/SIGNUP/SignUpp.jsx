@@ -18,7 +18,9 @@ const SignUpp = ({ onClickHandler }) => {
     });
   };
   const onSubmitHandler = async (e) => {
+
     e.preventDefault()
+
     if(signup.password === signup.confirmPassword){
       try {
         const Response = await SignUp(signup);
