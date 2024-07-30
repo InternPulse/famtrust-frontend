@@ -2,7 +2,7 @@ import React from 'react'
 
 const SatisfiedUsers = () => {
   return (    
-    <div className='max-w-full h-[120px] bg-hover-text flex text-xs justify-between items-center  gap-[10px] lg:text-2xl md:px-24 md:h-[160px] '>
+    <div className='max-w-full h-[120px] bg-hover-text flex text-xs justify-between items-center  gap-[10px] lg:text-2xl md:px-[120px] md:h-[160px] '>
         <div className=' w-[160px] h-[160px] flex flex-col items-center justify-center md:text-lg md:text-nowrap'>
             <h2 className='font-semibold' >15k+</h2> <p className='text-xs text-center md:text-lg'>Customer Service Points</p>
         </div>
