@@ -4,7 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkGrey: '#C0BDFF',
+        primary: {
+          blue: '#2452D6',
+          red: '#C50016',
+          green: '#00710B',
+        },
+        secondary: {
+          grey: '#777',
+          grey2: '#F9F8FF',
+        },
+
+        'darkGrey': '#C0BDFF',
         'hover-bg': '#4567F7',
         'text-color': '#14183B',
         'hover-text': '#F9F8FF',
@@ -15,8 +25,27 @@ module.exports = {
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
+        "montesarrat": "Montserrat Alternates"
+        
+              
       },
+      backgroundImage:{
+        "bg": "url('/herobg.png')"
+      },
+      backgroundColor: {
+        "bluey": "#4567F7",
+        "neutrall": "#F9F9F9",
+        "purp" : "#E2DDFF"
+      },
+      textColor:{
+        "txtblue": "#4567F7",
+      },
+
     },
   },
   plugins: [],
 };
+
+
+
+

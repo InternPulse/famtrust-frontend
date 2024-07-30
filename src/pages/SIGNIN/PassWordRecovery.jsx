@@ -1,4 +1,4 @@
-// import Button from "../Component/Button";
+import Button from '../../components/Button';
 // import { NavLink } from "react-router-dom";
 
 const PassWordRecovery = ({ clickRecovery }) => {
@@ -14,7 +14,7 @@ const PassWordRecovery = ({ clickRecovery }) => {
         <label className="font-lato text-base font-semibold" htmlFor="email">Email:</label>
         <input className="bg-white w-full py-2 mt-6 rounded-xl border-[1px]" type="tel" placeholder="Enter OTP" />
         <div className="mt-6" onClick={clickRecovery}>
-        {/* <Button >Send Reset Link</Button> */}
+        <Button >Send Reset Link</Button>
       </div>
       </form>
       <div className="text-center mb-4 py-4">

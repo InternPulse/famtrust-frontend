@@ -1,7 +1,7 @@
 import Login from "./Login";
 import Selection from "./Selection";
 import TwoFactor from "./TwoFactor";
-import login from "/src/assets/login.png";
+import login from "/login.png";
 import { useState } from "react";
 const LoginPage = () => {
   const [increase, setIncrease] = useState(1);
