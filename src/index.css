@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   /* background-color: #e2ddff; */
   font-family: 'Lato', sans-serif;
@@ -17,6 +16,99 @@ body {
 
 .scroll {
   @apply border px-1  hover:bg-hover-bg;
+}
+
+.mt-4 {
+  color: #ababab;
+  font-family: Lato, sans-serif; /* Fallback to sans-serif if Lato is unavailable */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.5px;
+}
+
+.small-body-text {
+  color: var(--Neutral-8, #777);
+  font-family: Lato, sans-serif; /* Adding sans-serif as a fallback */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.4px;
+}
+
+/* Card.module.css or your main CSS file */
+.card-name {
+  color: #000;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.25px;
+}
+
+.total-balance {
+  color: #ababab;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.25px;
+}
+
+.text-income {
+  color: var(
+    --Color-Style-Primary-Roles-Pri-variant,
+    #2452d6
+  ); /* Custom color or fallback */
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.date-text {
+  color: var(--Neutral-8, #777);
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+/* styles.css or relevant CSS file */
+.expense-label {
+  color: #000;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal; /* Regular weight */
+}
+
+@media (maxwidth: 768px) {
+  .profile-card {
+    width: 100%;
+    padding: 0; /* Remove padding on small screens */
+  }
+
+  .space-y-6 {
+    margin-top: 0; /* Remove vertical space on smaller screens */
+    margin-bottom: 0;
+  }
+
+  .space-x-6 {
+    margin-left: 0; /* Remove horizontal space on smaller screens */
+    margin-right: 0;
+  }
+
+  .progress-card {
+    width: 100%;
+    padding: 0; /* Remove padding on small screens */
+  }
 }
 
 .service-title {
@@ -71,4 +163,12 @@ body {
 .service-icon {
   max-height: 100%; /* Ensure the image doesn't exceed the container size */
   max-width: 100%; /* Ensure the image doesn't exceed the container size */
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    .flex > div {
+      width: 100% !important;
+    }
+  }
 }
