@@ -15,7 +15,6 @@ import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
 
 
-
 function App() {
   return (
     <Router>
@@ -30,6 +29,13 @@ function App() {
             </MainLayout>
           }
         />
+<<<<<<< HEAD
+        <Route
+          path="/overview"
+          element={
+            <div
+              className="flex-col h-screen w-[100%] overflow-auto"
+=======
 
         <Route path="/sub-account-list" element={
           <MainLayout showDashboardSidebar={true} showTopbar={true}>
@@ -54,6 +60,7 @@ function App() {
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
             <div
               className="flex-col h-screen  overflow-none"
+>>>>>>> 9056392d477f4ef3882c08b802c72630a4b30404
               style={{
                 backgroundColor:
                   'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
@@ -61,6 +68,10 @@ function App() {
             >
               <Overview />
             </div>
+<<<<<<< HEAD
+          }
+        />
+=======
             </MainLayout>
           }
         />
@@ -82,6 +93,7 @@ function App() {
           }
         />
         <Route path="/submit.jsx" element={<Submit />} />
+>>>>>>> 9056392d477f4ef3882c08b802c72630a4b30404
         {/* Add other routes here */}
       </Routes>
     </Router>
