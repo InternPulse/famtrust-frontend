@@ -5,10 +5,12 @@
 import MainLayout from '../components/Layout/MainLayout';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import Header from '../components/Header';
 
 const Home = () => {
   return (
    <>
+   
     <Hero/>
     <MainLayout activePage="home">
       <div className="p-4 w-10/12 m-auto relative left-14">
