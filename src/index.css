@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 body {
+  /* background-color: #e2ddff; */
   font-family: 'Lato', sans-serif;
 }
 /* body .lato-thin {
