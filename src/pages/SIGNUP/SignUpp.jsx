@@ -1,8 +1,9 @@
 import Button from '../../components/Button';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { SignUp } from '../../assets/AuthApiRequest/SignUp';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import { VerifyCall } from '../../assets/AuthApiRequest/VerifyCall';
 
 const SignUpp = ({ onClickHandler }) => {
   const [signup, setSignUp] = useState({
@@ -20,11 +21,13 @@ const SignUpp = ({ onClickHandler }) => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
 
-    e.preventDefault()
-
     if(signup.password === signup.confirmPassword){
       try {
         const Response = await SignUp(signup);
+        localStorage.setItem("token",Response.token)
+        const ResponseCall = await VerifyCall();
+        console.log(ResponseCall,"endpoint called")
+
   
         console.log(Response);
         onClickHandler()
@@ -33,13 +36,11 @@ const SignUpp = ({ onClickHandler }) => {
       }
 
     }
-    else{
-      <div>
-        <p>Invalid</p>
-      </div>
-    }
+   
     
   };
+
+  
 
   return (
     <div className="md:px-16 px-6">

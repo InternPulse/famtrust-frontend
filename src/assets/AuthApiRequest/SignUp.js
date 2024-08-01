@@ -5,10 +5,10 @@ export const SignUp = async (data) => {
     data,
     {
       headers: {
-        'Content-Type': 'multipart/form-data', // Ensure the correct content-type
+        'Content-Type': 'multipart/form-data', 
       },
-      // body: JSON.stringify(data),
+      
     },
   );
-  console.log(response.data);
+  return (response.data);
 };
