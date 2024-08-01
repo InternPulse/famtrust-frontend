@@ -13,7 +13,7 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
-
+import Header from './components/Header';
 
 
 function App() {
@@ -54,6 +54,7 @@ function App() {
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
             <div
               className="flex-col h-screen  overflow-none"
+
               style={{
                 backgroundColor:
                   'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
@@ -61,6 +62,8 @@ function App() {
             >
               <Overview />
             </div>
+
+       
             </MainLayout>
           }
         />
