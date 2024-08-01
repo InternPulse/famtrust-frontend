@@ -13,6 +13,7 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -27,14 +28,14 @@ function App() {
             </MainLayout>
           }
         />
-        <Route
-          path="/sub-account-list"
-          element={
-            <MainLayout showDashboardSidebar={true} showTopbar={true}>
-              <SubAccountList />
-            </MainLayout>
-          }
+<Route path="/sub-account-list" element={
+          <MainLayout showDashboardSidebar={true} showTopbar={true}>
+            <SubAccountList />
+          </MainLayout>
+        }
         />
+
+     
         <Route path="/login" element={<LoginPage />} />
         <Route path="signup" element={<SignUpPage />} />
         <Route path="recovery" element={<Recovery />} />
@@ -42,6 +43,7 @@ function App() {
           path="/overview"
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
+
               <div
                 className="flex-col h-screen overflow-none"
                 style={{
@@ -59,6 +61,18 @@ function App() {
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
               <Transaction />
+//             <div
+//               className="flex-col h-screen  overflow-none"
+
+//               style={{
+//                 backgroundColor:
+//                   'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
+//               }}
+//             >
+//               <Overview />
+//             </div>
+
+       
             </MainLayout>
           }
         />
@@ -70,7 +84,8 @@ function App() {
             </MainLayout>
           }
         />
-        <Route path="/submit" element={<Submit />} />
+        <Route path="/submit.jsx" element={<Submit />} />
+        {/* Add other routes here */}
       </Routes>
     </Router>
   );
