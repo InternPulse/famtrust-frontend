@@ -26,7 +26,7 @@ const Create = ({onClickHandler}) => {
        
         
         <div onClick={onClickHandler} className='text-white font-lato text-base font-semibold my-6' >
-        <Button>Verify ID</Button>
+        <Button>SIGN UP</Button>
         </div>
        
     </form>

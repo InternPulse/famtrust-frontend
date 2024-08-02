@@ -3,6 +3,7 @@ import Additional from "./Additional";
 import Create from "./Create";
 import SecretQuestions from "./SecretQuestions";
 import SignUp from "./SignUp";
+import SignUpp from "./SignUpp";
 import Verification from "./Verification";
 import login from "/login.png";
 import { useState } from "react";
@@ -25,15 +26,15 @@ const SignUpPage = () => {
     
   return (
     <div className=" md:flex justify-between md:mx-36 md:my-20 bg-neutrall rounded">
-      {increase === 1 && <Verification onClickHandler={onClickHandler} />}
-      {increase === 2 && <SignUp onClickHandler={onClickHandler} />}
-      {increase === 3 && <Additional onClickHandler={onClickHandler} />}
-      {increase === 4 && <Create onClickHandler={onClickHandler} />}
-      {increase === 5 && <SecretQuestions onClickHandler={onClickHandler} />}
+      {/* {increase === 4 && <Verification onClickHandler={onClickHandler} />} */}
+      {increase === 3 && <SignUp onClickHandler={onClickHandler} />}
+      {increase === 2 && <Additional onClickHandler={onClickHandler} />}
+      {increase === 1 && <SignUpp onClickHandler={onClickHandler} />}
+      {/* {increase === 5 && <SecretQuestions onClickHandler={onClickHandler} />} */}
 
 
       <div >
-        <img className="w-[500px] md:h-fit" src={login} alt="login" />
+        <img className="w-[400px] md:h-fit" src={login} alt="login" />
       </div>
     </div>
   );
