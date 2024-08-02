@@ -19,7 +19,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route
           path="/home"
           element={
@@ -28,22 +28,21 @@ function App() {
             </MainLayout>
           }
         />
-<Route path="/sub-account-list" element={
-          <MainLayout showDashboardSidebar={true} showTopbar={true}>
-            <SubAccountList />
-          </MainLayout>
-        }
+        <Route
+          path="/sub-account-list"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <SubAccountList />
+            </MainLayout>
+          }
         />
-
-     
         <Route path="/login" element={<LoginPage />} />
-        <Route path="signup" element={<SignUpPage />} />
-        <Route path="recovery" element={<Recovery />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/recovery" element={<Recovery />} />
         <Route
           path="/overview"
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
-
               <div
                 className="flex-col h-screen overflow-none"
                 style={{
@@ -61,18 +60,14 @@ function App() {
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
               <Transaction />
-//             <div
-//               className="flex-col h-screen  overflow-none"
-
-//               style={{
-//                 backgroundColor:
-//                   'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
-//               }}
-//             >
-//               <Overview />
-//             </div>
-
-       
+              {/* <div
+                className="flex-col h-screen overflow-none"
+                style={{
+                  backgroundColor: 'var(--Color-Style-Primary-Roles-Pri-container, #E2DDFF)',
+                }}
+              >
+                <Overview />
+              </div> */}
             </MainLayout>
           }
         />
@@ -84,7 +79,7 @@ function App() {
             </MainLayout>
           }
         />
-        <Route path="/submit.jsx" element={<Submit />} />
+        <Route path="/submit" element={<Submit />} />
         {/* Add other routes here */}
       </Routes>
     </Router>
