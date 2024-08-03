@@ -1,8 +1,23 @@
 import { FaAngleLeft } from 'react-icons/fa6';
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+// import { useEffect } from 'react';
+// import getTransaction from './apiFamT/trans-api';
 
-const TransList = ({ data }) => {
+const TransList = ({ data, }) => {
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const newData = await getTransaction(newData);
+  //       // setData(newData);
+  //       // console.log(newData);}
+  //     } catch (error) {
+  //       console.error('error fetching:', error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+
   return (
     <div>
       <div className="border-2 p-2 md:m-8 flex justify-around mt-6 truncate font-semibold rounded-md w-11/12 mx-auto text-sm md:text-base">
