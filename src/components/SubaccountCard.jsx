@@ -49,4 +49,4 @@ const SubAccountCard = () => {
 }
     
 
-export default SubAccountCard
+export default SubAccountCard;

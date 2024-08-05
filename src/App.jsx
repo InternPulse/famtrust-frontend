@@ -13,7 +13,8 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
-import Header from './components/Header';
+import Dashboard from './pages/AdminDashboard';
+
 
 function App() {
   return (
@@ -28,6 +29,16 @@ function App() {
             </MainLayout>
           }
         />
+        <Route
+          path="/dashboard"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <Dashboard />
+            </MainLayout>
+          }
+        />
+
+        
         <Route
           path="/sub-account-list"
           element={
