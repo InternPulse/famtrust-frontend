@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CgProfile } from 'react-icons/cg';
-import { VscArrowSmallDown } from 'react-icons/vsc';
+
+import getFundsRequest from './apiFamT/funds-api';
+// import { data } from 'autoprefixer';
 
 const FundRequest = () => {
   const [search, setSearch] = useState('');
@@ -11,15 +12,20 @@ const FundRequest = () => {
   const [date, setDate] = useState('');
   const [reasons, setReasons] = useState('');
 
-  const submitClick = (event) => {
+  const submitClick = async (event) => {
     event.preventDefault();
+    try {
+      const data = await getFundsRequest(data);
 
-    setSearch('');
-    setRequest('');
-    setEmail('');
-    setAmount('');
-    setDate('');
-    setReasons('');
+      setSearch('');
+      setRequest('');
+      setEmail('');
+      setAmount('');
+      setDate('');
+      setReasons('');
+    } catch (error) {
+      console.error('error in fetching:', error);
+    }
   };
 
   return (
@@ -72,10 +78,10 @@ const FundRequest = () => {
                 className="rounded-r-xl border-0 bg-transparent"
                 value="que1"
               >
-                q
+                who to request fund from
               </option>
-              <option value="que2"></option>
-              <option value="que3"></option>
+              <option value="que2">who to request fund from2</option>
+              <option value="que3">who to request fund from3</option>
             </select>
           </label>
           <label htmlFor="">Email</label>
