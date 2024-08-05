@@ -29,6 +29,7 @@ const Login = ({onClickHandler}) => {
    try{
     if(login.email && login.password){
       const Response = await LoginApi(login)
+      navigate("/overview")
       console.log(Response, "from LOGIN")
       if(Response.status === "success"){
         localStorage.setItem("token",Response.token)
