@@ -9,17 +9,6 @@ import image4 from '../../../assets/dashboardImages/image4.png';
 
 import plus from '../../../assets/dashboardImages/plus.png';
 
-{
-  /*
-import image1 from new URL('../../assets/dashboardImages/image1.png', import.meta.url);
-import image2 from new URL('../../assets/dashboardImages/image2.png', import.meta.url);
-import image3 from new URL('../../assets/dashboardImages/image3.png', import.meta.url);
-import image4 from new URL('../../assets/dashboardImages/image4.png', import.meta.url);
-import plus from new URL('../../assets/dashboardImages/plus.png', import.meta.url);
-
-*/
-}
-
 const CardSection = () => {
   const cardsData = [
     {
@@ -53,7 +42,7 @@ const CardSection = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row lg:ml-[330px] gap-[8px] p-8 bg-gray-100 rounded-lg shadow-md">
+    <div className="flex flex-col lg:flex-row lg:ml-[24px] gap-[8px] p-8 bg-gray-100 rounded-lg shadow-md">
       {cardsData.map((card, index) => (
         <Card
           key={index}
