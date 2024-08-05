@@ -1,94 +1,96 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TransList from './transList';
 import TransSearch from './transSearch';
 import { Link } from 'react-router-dom';
-import { CgProfile } from 'react-icons/cg';
-import { VscArrowSmallDown } from 'react-icons/vsc';
+import getTransaction from './apiFamT/trans-api';
 
 const Transaction = () => {
   const [data, setData] = useState([
-    {
-      date: '11th july',
-      Amount: '#2000',
-      Description: 'Olawale Johanna',
-      Category: 'Data',
-      ID: 1001,
-      status: 'pending',
-    },
-    {
-      date: '10th july',
-      Amount: '#5000',
-      Description: 'MTN Airtime',
-      Category: 'Data',
-      ID: 1002,
-      status: 'Approved',
-    },
-    {
-      date: '8th july',
-      Amount: '#2000',
-      Description: 'Mustapha Glory',
-      Category: 'Groceries',
-      ID: 1003,
-      status: 'Approved',
-    },
-    {
-      date: '8th july',
-      Amount: '#2000',
-      Description: 'Prestige Stores',
-      Category: 'Groceries',
-      ID: 1004,
-      status: 'Declined',
-    },
-    {
-      date: '1th july',
-      Amount: '#1000',
-      Description: 'John Chukwu',
-      Category: 'Shopping',
-      ID: 1005,
-      status: 'Approved',
-    },
-    {
-      date: '11th july',
-      Amount: '#2000',
-      Description: 'Olawale Johanna',
-      Category: 'Data',
-      ID: 1001,
-      status: 'pending',
-    },
-    {
-      date: '10th july',
-      Amount: '#5000',
-      Description: 'MTN Airtime',
-      Category: 'Data',
-      ID: 1002,
-      status: 'Approved',
-    },
-    {
-      date: '8th july',
-      Amount: '#2000',
-      Description: 'Mustapha Glory',
-      Category: 'Groceries',
-      ID: 1003,
-      status: 'Approved',
-    },
-    {
-      date: '8th july',
-      Amount: '#2000',
-      Description: 'Prestige Stores',
-      Category: 'Groceries',
-      ID: 1004,
-      status: 'Declined',
-    },
-    {
-      date: '1th july',
-      Amount: '#1000',
-      Description: 'John Chukwu',
-      Category: 'Shopping',
-      ID: 1005,
-      status: 'Approved',
-    },
+    // {
+    //   date: '11th july',
+    //   Amount: '#2000',
+    //   Description: 'Olawale Johanna',
+    //   Category: 'Data',
+    //   ID: 1001,
+    //   status: 'pending',
+    // },
+    // {
+    //   date: '10th july',
+    //   Amount: '#5000',
+    //   Description: 'MTN Airtime',
+    //   Category: 'Data',
+    //   ID: 1002,
+    //   status: 'Approved',
+    // },
+    // {
+    //   date: '8th july',
+    //   Amount: '#2000',
+    //   Description: 'Mustapha Glory',
+    //   Category: 'Groceries',
+    //   ID: 1003,
+    //   status: 'Approved',
+    // },
+    // {
+    //   date: '8th july',
+    //   Amount: '#2000',
+    //   Description: 'Prestige Stores',
+    //   Category: 'Groceries',
+    //   ID: 1004,
+    //   status: 'Declined',
+    // },
+    // {
+    //   date: '1th july',
+    //   Amount: '#1000',
+    //   Description: 'John Chukwu',
+    //   Category: 'Shopping',
+    //   ID: 1005,
+    //   status: 'Approved',
+    // },
+    // {
+    //   date: '11th july',
+    //   Amount: '#2000',
+    //   Description: 'Olawale Johanna',
+    //   Category: 'Data',
+    //   ID: 1001,
+    //   status: 'pending',
+    // },
+    // {
+    //   date: '10th july',
+    //   Amount: '#5000',
+    //   Description: 'MTN Airtime',
+    //   Category: 'Data',
+    //   ID: 1002,
+    //   status: 'Approved',
+    // },
+    // {
+    //   date: '8th july',
+    //   Amount: '#2000',
+    //   Description: 'Mustapha Glory',
+    //   Category: 'Groceries',
+    //   ID: 1003,
+    //   status: 'Approved',
+    // },
+    // {
+    //   date: '8th july',
+    //   Amount: '#2000',
+    //   Description: 'Prestige Stores',
+    //   Category: 'Groceries',
+    //   ID: 1004,
+    //   status: 'Declined',
+    // },
+    // {
+    //   date: '1th july',
+    //   Amount: '#1000',
+    //   Description: 'John Chukwu',
+    //   Category: 'Shopping',
+    //   ID: 1005,
+    //   status: 'Approved',
+    // },
   ]);
   const [search, setSearch] = useState('');
+  const [error, setError] = useState(null);
+
+  
 
   return (
     <div className="">
@@ -121,6 +123,7 @@ const Transaction = () => {
       <div className="bg-secondary-grey2 m-6 p-1 rounded-lg ">
         <TransSearch data={data} setData={setData} setSearch={setSearch} />
         <TransList data={data} />
+        
         {/* {data.map((db) => (
         <div className='flex justify-around items-center text-center ' key={db.id}>
           <div>{db.date}</div>
