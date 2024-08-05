@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { SignUp } from '../../assets/AuthApiRequest/SignUp';
 // import { NavLink } from 'react-router-dom';
 import { VerifyCall } from '../../assets/AuthApiRequest/VerifyCall';
+import { VerifyEmail } from '../../assets/AuthApiRequest/VerifyEmail';
 
 const SignUpp = ({ onClickHandler }) => {
   const [signup, setSignUp] = useState({
@@ -11,6 +12,7 @@ const SignUpp = ({ onClickHandler }) => {
     password: '',
     confirmPassword: '',
   });
+  const [correct, setCorrect] = useState(true);
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
     setSignUp({
@@ -20,21 +22,27 @@ const SignUpp = ({ onClickHandler }) => {
   };
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-
     if(signup.password === signup.confirmPassword){
       try {
         const Response = await SignUp(signup);
         localStorage.setItem("token",Response.token)
-        const ResponseCall = await VerifyCall();
-        console.log(ResponseCall,"endpoint called")
-
-  
-        console.log(Response);
+        
+        // const ResponseCall = await VerifyCall();
+        // console.log(ResponseCall,"endpoint from verify call")
+        // setCorrect(true)
+        // console.log(ResponseEmail, "endpoint from verify email");
+        // const VerCode = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkxNjA5NGQ4LTdmM2ItNGE5ZC1hMDc2LTE0OGY2YWMyY2RiMSIsImV4cCI6MTcyMjYxOTM0Mn0.nozD1o1WZzMoOka_L12pF7ORXdf_XWp5TGcE0KeJ9JU'
+        // const ResponseEmail = await VerifyEmail(VerCode);
+        // console.log(ResponseEmail, "endpoint from verify email");
+        // console.log(Response, "from sign up endpoint");
         onClickHandler()
       } catch (err) {
         console.log(err);
       }
 
+    }
+    else{
+      setCorrect(false)
     }
    
     
@@ -99,13 +107,13 @@ const SignUpp = ({ onClickHandler }) => {
             onChange={onChangeHandler}
           />
         </div>
-
+          { !correct ? <p className='text-red-500'>Passwords do not match</p>:null}
         <Button type="submit">SIGN UP</Button>
 
         <p className="text-center font-lato text-base font-normal pb-3">
           Already have an account?{' '}
-          <a className="text-txtblue" href="signup">
-            Sign up
+          <a className="text-txtblue" href="login">
+            Login
           </a>
         </p>
       </form>

@@ -3,28 +3,21 @@ import Button from '../../components/Button';
 
 const PassWordRecovery = ({ clickRecovery }) => {
   return (
-    <div className="md:px-16 overflow-hidden px-6">
-      <h1 className="text-txtblue  font-lato text-3xl font-bold py-8">
-        PassWord Recovery
+    <div className="md:px-16 overflow-hidden px-6 md:w-[50%]">
+      <h1 className="text-txtblue font-lato text-3xl font-bold pt-8 pb-3 text-center">
+        Password Recovery
       </h1>
-      <p className="pb-3">
-        Enter the 6-digit code send to you to confirm your login
+      <p className="pb-5 font-lato text-2xl text-center">
+        Enter your email
       </p>
       <form action="">
-        <label className="font-lato text-base font-semibold" htmlFor="email">Email:</label>
-        <input className="bg-white w-full py-2 mt-6 rounded-xl border-[1px]" type="tel" placeholder="Enter OTP" />
+        <label className="font-lato text-base font-semibold" htmlFor="email">Email Adress</label>
+        <input className="bg-white w-full py-2 rounded-xl border-[1px] mt-1" type="email" placeholder="Enter your registered email address" />
         <div className="mt-6" onClick={clickRecovery}>
-        <Button >Send Reset Link</Button>
+        <Button >Submit</Button>
       </div>
       </form>
-      <div className="text-center mb-4 py-4">
-        <a
-          className="text-txtblue font-Lato text-base font-bold text-center"
-          href="#"
-        >
-          Resend Link
-        </a>
-      </div>
+    
     </div>
   );
 };
