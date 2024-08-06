@@ -1,106 +1,148 @@
-import React, { useState } from 'react';
-import { TbHomeFilled } from "react-icons/tb";
+import React, { useState, useEffect } from 'react';
+import { RxDashboard } from "react-icons/rx";
 import { RiTeamLine } from "react-icons/ri";
 import { GrLineChart } from "react-icons/gr";
-import { IoMdNotifications } from "react-icons/io";
-import { IoMdSettings } from "react-icons/io";
-import { BsBarChartFill } from "react-icons/bs";
+import { IoMdNotifications, IoMdSettings } from "react-icons/io";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { MdOutlineLogout, MdOutlineHelpOutline } from "react-icons/md";
 import FamTrustLogo from '../assets/FamTrustlogo.png';
+import FamTrustSmallLogo from '../assets/FamTrustSmallLogo.png';
 
 const Sidebar = () => {
     // State to manage the open/closed state of dropdown menus
     const [openDropdown, setOpenDropdown] = useState(null);
+    // State to track if the screen is small (mobile)
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-    // Function to toggle the dropdown menu
-    // const toggleDropdown = (menu) => {
-    //     setOpenDropdown(openDropdown === menu ? null : menu);
-    // };
+    // Effect to handle screen size changes
+    useEffect(() => {
+        const handleResize = () => {
+            // Set isSmallScreen to true if width is less than 768px (md breakpoint)
+            setIsSmallScreen(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial check
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Function to handle mouse enter for dropdown on non-small screens
     const handleMouseEnter = (menu) => {
-        setOpenDropdown(menu);
+        if (!isSmallScreen) {
+            setOpenDropdown(menu);
+        }
     };
 
+    // Function to handle mouse leave for dropdown on non-small screens
     const handleMouseLeave = () => {
-        setOpenDropdown(null);
+        if (!isSmallScreen) {
+            setOpenDropdown(null);
+        }
+    };
+
+    // Function to toggle dropdown on click (for small screens)
+    const toggleDropdown = (menu) => {
+        if (isSmallScreen) {
+            setOpenDropdown(openDropdown === menu ? null : menu);
+        }
     };
 
     // Array containing menu items with their icons, labels, and sub-items
     const menuItems = [
         {
-            icon: <TbHomeFilled className='text-2xl' />,
-            label: 'Home',
-            href: '/home',
-            subItems: [
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Overview', href: '/overview' },
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Sub-Account List', href: '/sub-account-list' }
-            ]
+            icon: <RxDashboard />,
+            label: 'Dashboard',
+            href: '/overview',
+            subItems: []
         },
         {
-            icon: <RiTeamLine className='text-2xl' />,
-            label: 'Family Management',
-            href: '/family-management',
+            icon: <RiTeamLine />,
+            label: 'Family Account Management',
+            href: '/fund-request',
             subItems: [
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Add Sub-Account', href: '/add-sub-account' },
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Individual Sub-Accounts', href: '/individual-sub-accounts' },
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Permissions and Roles', href: '/permissions-roles' },
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Family Member List', href: '/family-member-list' },
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Notifications', href: '/notifications' }
+                { icon: <RxDashboard />, label: 'Family Access Management', href: '/family_access_management' },
+                { icon: <RxDashboard />, label: 'Family Transaction Management', href: '/family_transaction_management' },
             ]
         },
+        // {
+        //     icon: <GrLineChart />,
+        //     label: 'Finance Management',
+        //     subItems: [
+        //         { icon: <RxDashboard />, label: 'Transaction History', href: '/transaction-history' },
+        //         { icon: <RxDashboard />, label: 'Fund Request', href: '/fund-request' },
+        //         { icon: <RxDashboard />, label: 'Verify ID', href: '/verify-id' }
+        //     ]
+        // },
         {
-            icon: <GrLineChart className='text-2xl' />,
-            label: 'Finance Management',
-            subItems: [
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Transaction History', href: '/transaction-history' },
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Fund Request', href: '/fund-request' },
-                { icon: <TbHomeFilled className='text-lg' />, label: 'Verify ID', href: '/verify-id' }
-            ]
-        },
-        {
-            icon: <IoMdNotifications className='text-2xl' />,
+            icon: <IoMdNotifications />,
             label: 'Notifications',
             href: '/notifications',
             subItems: []
         },
         {
-            icon: <IoMdSettings className='text-2xl' />,
+            icon: <IoMdSettings />,
             label: 'Settings',
             href: '/settings',
             subItems: []
         },
         {
-            icon: <BsBarChartFill className='text-2xl' />,
+            icon: <MdOutlineHelpOutline />,
             label: 'Help & Support',
             href: '/help-support',
+            subItems: []
+        },
+        {
+            icon: <MdOutlineLogout className='text-red-700'/>,
+            label: 'Logout',
+            href: '/logout',
             subItems: []
         }
     ];
 
     return (
-        <div className="bg-darkGrey text-text-color w-1/3 lg:w-1/4 h-full fixed flex flex-col items-center font-bold">
+        <div className={`bg-sb-bg text-sb-text-color ${isSmallScreen ? 'w-16' : 'w-1/4'} h-full fixed flex flex-col items-center font-bold transition-all duration-300`}>
+            {/* Logo section */}
             <div className="w-full text-center">
-                <img src={FamTrustLogo} alt="FamTrust Logo" className="pl-6 pr-12 py-5 lg:pl-10 lg:pr-16" />
-                <hr className='w-full text-white' />
+                {isSmallScreen ? (
+                    // Small logo for small and medium screens
+                    <img src={FamTrustSmallLogo} alt="FamTrust Small Logo" className="w-12 h-12 mx-auto my-4" />
+                ) : (
+                    // Large logo for large screens
+                    <img src={FamTrustLogo} alt="FamTrust Logo" className="pl-6 pr-12 py-5 lg:pl-10 lg:pr-16" />
+                )}
             </div>
 
-            <nav className="font-bold text-sm space-y-4 mt-16 text-center justify-between">
+            {/* Navigation menu */}
+            <nav className={`font-bold text-sm space-y-4 mt-8 ${isSmallScreen ? 'w-full' : 'text-center justify-between'}`}>
                 {menuItems.map((item, index) => (
-                    <div key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave} className="p-2">
-
-                        <div className="flex justify-between items-center cursor-pointer hover:text-hover-text hover:bg-hover-bg hover:rounded hover:px-2.5 hover:py-2 lg:space-x-16 hover:font-medium" key={index}>
-                            <ul className="flex items-center space-x-2">
-                                <li>{item.icon}</li>
-                                <li><a href={item.href}>{item.label}</a></li>
+                    <div 
+                        key={index} 
+                        onMouseEnter={() => handleMouseEnter(index)} 
+                        onMouseLeave={handleMouseLeave}
+                        onClick={() => toggleDropdown(index)}
+                        className={`p-2 ${isSmallScreen ? 'text-center' : ''}`}
+                    >
+                        {/* Menu item */}
+                        <div className={`flex ${isSmallScreen ? 'justify-center' : 'justify-between'} items-center cursor-pointer hover:text-sb-hover-text hover:bg-sb-hover-bg hover:rounded hover:px-2.5 hover:py-2 ${isSmallScreen ? '' : 'lg:space-x-16'}`}>
+                            <ul className={`flex items-center ${isSmallScreen ? 'justify-center' : 'space-x-2'}`}>
+                                <li className={isSmallScreen ? 'text-2xl' : ''}>{item.icon}</li>
+                                {/* Show label on medium and large screens */}
+                                {!isSmallScreen && <li><a href={item.href}>{item.label}</a></li>}
                             </ul>
-                            {openDropdown === index ? <IoIosArrowUp className='text-2xl' /> : <IoIosArrowDown className='text-2xl' />}
+                            {/* Show dropdown arrows only on medium and large screens */}
+                            {!isSmallScreen && item.subItems.length > 0 && (
+                                openDropdown === index ? <IoIosArrowUp className='text-2xl' /> : <IoIosArrowDown className='text-2xl' />
+                            )}
                         </div>
 
+                        {/* Dropdown menu */}
                         {openDropdown === index && item.subItems.length > 0 && (
-                            <div className='px-7 lg:px-16 mt-2 space-y-2'>
+                            <div className={`mt-2 space-y-2 ${isSmallScreen ? 'absolute left-16 bg-sb-bg p-2 rounded' : 'px-7 lg:px-16'}`}>
                                 {item.subItems.map((subItem, subIndex) => (
-                                    <ul key={subIndex} className='flex items-center space-x-2 hover:text-hover-text hover:bg-hover-bg hover:rounded hover:px-1 hover:py-1 cursor-pointer'>
-                                        <li> {subItem.icon}</li>
-                                        <li  className='hover:font-medium'><a href={subItem.href}>{subItem.label}</a></li>
+                                    <ul key={subIndex} className='flex justify-between items-center hover:text-sb-hover-text hover:bg-sb-hover-bg hover:rounded hover:px-1 hover:py-1 cursor-pointer'>
+                                        <li>{subItem.icon}</li>
+                                        <li className=''><a href={subItem.href}>{subItem.label}</a></li>
                                     </ul>
                                 ))}
                             </div>
