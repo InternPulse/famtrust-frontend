@@ -14,10 +14,14 @@ module.exports = {
           grey2: '#F9F8FF',
         },
 
-        'darkGrey': '#E2DDFF',
-        'hover-bg': '#F1F1F1',
-        'text-color': '#777777',
-        'hover-text': '#2452D6',
+        'darkGrey': '#C0BDFF',
+        'hover-bg': '#4567F7',
+        'text-color': '#14183B',
+        'sb-bg': '#E2DDFF',
+        'sb-hover-text': '#4567F7',
+        'sb-hover-bg': '#F9F8FF',
+        'sb-text-color': '#474747',
+        'hover-text': '#F9F8FF',
         'up-arrow': '#00710B',
         'add-sub-acc': '#2452D6',
         // 'gray': '#E2E2E2'
