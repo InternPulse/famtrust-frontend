@@ -13,7 +13,8 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
-import Dashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/AdminDashboard';
+import SubAcctDashboard from './pages/SubAcctDashboard';
 
 
 function App() {
@@ -33,11 +34,18 @@ function App() {
           path="/dashboard"
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
-              <Dashboard />
+              <AdminDashboard />
             </MainLayout>
           }
         />
-
+        <Route
+          path="/sub-account-dashboard"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <SubAcctDashboard />
+            </MainLayout>
+          }
+        />
         
         <Route
           path="/sub-account-list"

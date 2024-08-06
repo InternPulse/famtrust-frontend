@@ -1,13 +1,13 @@
 import React from 'react';
 import UserInfo from '../components/UserInfo';
-import BalanceCard from '../components/AdminBalanceCard';
+import BalanceCard from '../components/SubAcctBalanceCard';
 import SavingsProgress from '../components/SavingsProgress';
 import AccountsOverview from '../components/AccountsOverview';
 import SearchAndSort from '../components/SearchAndSort';
 import SubAccountsTable from '../components/SubAccountsTable';
 import TransactionHistoryTable from '../components/TransactionHistoryTable';
 
-const AdminDashboard = () => {
+const SubAcctDashboard = () => {
   return (
     // Use a responsive container with padding
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -24,17 +24,17 @@ const AdminDashboard = () => {
           <SavingsProgress monthlyIncome={50000} spent={14500} left={35500} totalSavings={1000} />
         </div>
       </div>
-      
+
       {/* Search and sort section */}
       <div className="mb-8">
         <SearchAndSort />
       </div>
-      
+
       {/* Sub-accounts table */}
       <div className="mb-8">
         <SubAccountsTable />
       </div>
-      
+
       {/* Transaction history table */}
       <div>
         <TransactionHistoryTable />
@@ -43,4 +43,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default SubAcctDashboard
