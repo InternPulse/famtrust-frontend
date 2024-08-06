@@ -59,7 +59,7 @@ const Sidebar = () => {
         {
             icon: <RiTeamLine />,
             label: 'Family Account Management',
-            href: '/family-management',
+            href: '/fund-request',
             subItems: [
                 { icon: <RxDashboard />, label: 'Family Access Management', href: '/family_access_management' },
                 { icon: <RxDashboard />, label: 'Family Transaction Management', href: '/family_transaction_management' },
@@ -101,7 +101,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className={`bg-darkGrey text-text-color ${isSmallScreen ? 'w-16' : 'w-1/4'} h-full fixed flex flex-col items-center font-bold transition-all duration-300`}>
+        <div className={`bg-sb-bg text-sb-text-color ${isSmallScreen ? 'w-16' : 'w-1/4'} h-full fixed flex flex-col items-center font-bold transition-all duration-300`}>
             {/* Logo section */}
             <div className="w-full text-center">
                 {isSmallScreen ? (
@@ -124,7 +124,7 @@ const Sidebar = () => {
                         className={`p-2 ${isSmallScreen ? 'text-center' : ''}`}
                     >
                         {/* Menu item */}
-                        <div className={`flex ${isSmallScreen ? 'justify-center' : 'justify-between'} items-center cursor-pointer hover:text-hover-text hover:bg-hover-bg hover:rounded hover:px-2.5 hover:py-2 ${isSmallScreen ? '' : 'lg:space-x-16'}`}>
+                        <div className={`flex ${isSmallScreen ? 'justify-center' : 'justify-between'} items-center cursor-pointer hover:text-sb-hover-text hover:bg-sb-hover-bg hover:rounded hover:px-2.5 hover:py-2 ${isSmallScreen ? '' : 'lg:space-x-16'}`}>
                             <ul className={`flex items-center ${isSmallScreen ? 'justify-center' : 'space-x-2'}`}>
                                 <li className={isSmallScreen ? 'text-2xl' : ''}>{item.icon}</li>
                                 {/* Show label on medium and large screens */}
@@ -138,9 +138,9 @@ const Sidebar = () => {
 
                         {/* Dropdown menu */}
                         {openDropdown === index && item.subItems.length > 0 && (
-                            <div className={`mt-2 space-y-2 ${isSmallScreen ? 'absolute left-16 bg-darkGrey p-2 rounded' : 'px-7 lg:px-16'}`}>
+                            <div className={`mt-2 space-y-2 ${isSmallScreen ? 'absolute left-16 bg-sb-bg p-2 rounded' : 'px-7 lg:px-16'}`}>
                                 {item.subItems.map((subItem, subIndex) => (
-                                    <ul key={subIndex} className='flex justify-between items-center hover:text-hover-text hover:bg-hover-bg hover:rounded hover:px-1 hover:py-1 cursor-pointer'>
+                                    <ul key={subIndex} className='flex justify-between items-center hover:text-sb-hover-text hover:bg-sb-hover-bg hover:rounded hover:px-1 hover:py-1 cursor-pointer'>
                                         <li>{subItem.icon}</li>
                                         <li className=''><a href={subItem.href}>{subItem.label}</a></li>
                                     </ul>
