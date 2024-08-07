@@ -53,7 +53,7 @@ const Sidebar = () => {
         {
             icon: <RxDashboard />,
             label: 'Dashboard',
-            href: '/overview',
+            href: '/dashboard',
             subItems: []
         },
         {
