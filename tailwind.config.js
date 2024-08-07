@@ -28,6 +28,8 @@ module.exports = {
         'lightGrey': '#ABABAB',
         'faint-blue': '#C0BDFF',
         'lightBlue': '#2452D6',
+        'darkestGrey': '#777777',
+        'lightestGrey':'#F9F8FF',
         // 'gray': '#E2E2E2'
         gray: '#bdbdbd',
       },
