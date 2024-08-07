@@ -1,9 +1,9 @@
 import React from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import profileImage from '../../assets/dashboardImages/progressImg.png'; // Replace with your actual image path
+// import profileImage from '../../assets/dashboardImages/progressImg.png'; // Replace with your actual image path
 import styles from './ProgressCard.module.css'; // Import the CSS module
-import Line from '../../assets/dashboardImages/line.png';
+// import Line from '../../assets/dashboardImages/line.png';
 
 const ProgressCard = () => {
   return (
@@ -19,11 +19,11 @@ const ProgressCard = () => {
               rotation: 0.75,
             })}
           />
-          <img
+          {/* <img
             src={profileImage}
             alt="Profile"
             className={styles.profileImage}
-          />
+          /> */}
         </div>
         <div className="flex flex-col items-start">
           <p className={styles.monthlyIncome}>
@@ -52,7 +52,7 @@ const ProgressCard = () => {
         </div>
       </div>
       <div className="mt-2">
-        <img src={Line} alt="line" />
+        {/* <img src={Line} alt="line" /> */}
       </div>
     </div>
   );

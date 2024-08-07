@@ -6,6 +6,7 @@ import AccountsOverview from '../components/AccountsOverview';
 import SearchAndSort from '../components/SearchAndSort';
 import SubAccountsTable from '../components/SubAccountsTable';
 import TransactionHistoryTable from '../components/TransactionHistoryTable';
+import DashboardCard from '../components/DashboardCard';
 
 const AdminDashboard = () => {
   return (
@@ -15,9 +16,20 @@ const AdminDashboard = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         {/* Left column */}
         <div className="space-y-6">
-          <UserInfo name="Ritji Ishaku" id="8327642732" />
+          <DashboardCard 
+          name='Ritji Ishaku'
+          id=''
+          growth=''
+          // balance={`{balance}`.toLocaleString()}
+          balance='12000'
+          Transfer= 'Transfer'
+          Withdraw='Withdraw'
+          
+          />
+
+          {/* <UserInfo name="Ritji Ishaku" id="8327642732" />
           <BalanceCard balance={3500000} growth={10.08} />
-          <AccountsOverview />
+          <AccountsOverview /> */}
         </div>
         {/* Right column */}
         <div>

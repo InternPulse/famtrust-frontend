@@ -24,6 +24,7 @@ const SavingsProgress = ({ monthlyIncome, spent, left, totalSavings }) => {
       </div>
       {/* Total savings and encouragement message */}
       <p className="text-sm">Total savings so far: ₦{totalSavings}</p>
+      <hr className='my-4 opacity-10'/>
       <p className="text-sm text-green-600">Great job! You've almost reached your goal!</p>
     </div>
   );

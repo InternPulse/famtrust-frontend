@@ -15,6 +15,7 @@ import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
 import AdminDashboard from './pages/AdminDashboard';
 import SubAcctDashboard from './pages/SubAcctDashboard';
+import DashboardCard from './components/DashboardCard';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
               <AdminDashboard />
+              {/* <DashboardCard/> */}
             </MainLayout>
           }
         />
