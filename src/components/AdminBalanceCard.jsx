@@ -14,7 +14,7 @@ const BalanceCard = ({ balance, growth }) => {
         <button className="bg-sb-hover-text text-white px-4 py-2 rounded-lg hover:bg-blue-800">
           Transfer Funds
         </button>
-        <button className="bg-darkerGrey text-text-color px-4 py-2 rounded-lg hover:bg-faint-blue">
+        <button className="bg-darkerGrey text-text-color px-4 py-2 rounded-lg hover:bg-faint-blue"> 
           Withdraw Funds
         </button>
       </div>
