@@ -34,7 +34,7 @@ const services = [
 ];
 
 const ServiceCard = ({ icon, title, link }) => (
-  <div className="bg-lightestGrey p-4 rounded-lg border-2 border-lightBlue flex flex-col h-full">
+  <div className="bg-lightestGrey p-4 rounded-lg border border-lightBlue flex flex-col h-full m-8 lg:m-4">
     <div className="text-5xl mb-2 text-lightBlue">{icon}</div>
     <h3 className="text-lg font-semibold mb-4">{title}</h3>
     <a href={link} className="text-darkestGrey font-medium mt-auto underline flex flex-row items-center">
