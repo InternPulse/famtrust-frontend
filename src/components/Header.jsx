@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import logo from "/logofarm.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
@@ -10,11 +11,11 @@ const Header = () => {
   const clickShow = () => {
     setShow((show) => !show);
   };
-  const closeShow = ()=> {
+  const closeShow = () => {
     setShow(false)
   }
   return (
-    <div className= {`py-4 ${clickShow && " overflow-hidden"} `}>
+    <div className={`py-4 ${clickShow && " overflow-hidden"} `}>
       <div className=" flex justify-between items-center bg-blueyy md:px-24 px-6">
         <div>
           <NavLink className="flex gap-1 items-center" to="/">
@@ -32,10 +33,10 @@ const Header = () => {
           )}
         </div>
         <div className="text-txtblue md:flex gap-5 hidden">
-          <NavLink to="about">About Us</NavLink>
-          <NavLink to="services">Services</NavLink>
-          <NavLink to="resources">Resources</NavLink>
-          <NavLink to="help">Help & Support</NavLink>
+          <HashLink smooth to="#about">About Us</HashLink>
+          <HashLink smooth to="#services">Services</HashLink>
+          <HashLink smooth to="#resources">Resources</HashLink>
+          <HashLink smooth to="#help">Help & Support</HashLink>
         </div>
         <div className="md:flex gap-5 hidden">
           <NavLink className="bg-white text-txtblue border-solid border-[1px] border-blue-600  rounded-lg" to="login">
@@ -51,18 +52,18 @@ const Header = () => {
       </div>
       <div className={`md:hidden flex flex-col text-center px-6 h-screen mt-4 transition-all py-4 bg-black text-white ${show ? "block" : "hidden"}`}>
         <div onClick={closeShow} className="flex flex-col py-6 ">
-          <NavLink className="py-4" to="about">About Us</NavLink>
-          <NavLink className="py-4" to="services">Services</NavLink>
-          <NavLink className="py-4" to="resources">Resources</NavLink>
-          <NavLink className="py-4" to="help">Help & Support</NavLink>
+          <HashLink smooth className="py-4" to="#about">About Us</HashLink>
+          <HashLink smooth className="py-4" to="#services">Services</HashLink>
+          <HashLink smooth className="py-4" to="#resources">Resources</HashLink>
+          <HashLink smooth className="py-4" to="#help">Help & Support</HashLink>
         </div>
         <div onClick={closeShow} className="flex flex-col py-4 ">
-        <NavLink className="bg-white text-txtblue my-6 rounded-lg" to="login">
-          <button className="px-3 py-4 ">Login</button>
-        </NavLink>
-        <NavLink className="bg-bluey px-3 py-4 rounded-lg text-white" to="signup">
-          <button>Sign Up</button>
-        </NavLink>
+          <NavLink className="bg-white text-txtblue my-6 rounded-lg" to="login">
+            <button className="px-3 py-4 ">Login</button>
+          </NavLink>
+          <NavLink className="bg-bluey px-3 py-4 rounded-lg text-white" to="signup">
+            <button>Sign Up</button>
+          </NavLink>
         </div>
       </div>
     </div>
