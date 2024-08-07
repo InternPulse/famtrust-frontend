@@ -8,9 +8,9 @@ const SubAccountsTable = () => {
   ];
 
   return (
-    <div className="mb-8">
+    <div className="mb-8 ">
       <h3 className="font-semibold mb-4">Manage sub-accounts and permissions</h3>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto ">
         <table className="w-full table-auto">
           {/* Table header */}
           <thead className="bg-purple-100">

@@ -6,23 +6,37 @@ import AccountsOverview from '../components/AccountsOverview';
 import SearchAndSort from '../components/SearchAndSort';
 import SubAccountsTable from '../components/SubAccountsTable';
 import TransactionHistoryTable from '../components/TransactionHistoryTable';
+import DashboardCard from '../components/DashboardCard';
 
 const AdminDashboard = () => {
   return (
     // Use a responsive container with padding
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="container  px-12 sm:px-6 lg:px-8 ">
       {/* Top section: User info, balance, and savings progress */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2  mb-8 md:text-sm  ">
         {/* Left column */}
         <div className="space-y-6">
-          <UserInfo name="Ritji Ishaku" id="8327642732" />
-          <BalanceCard balance={3500000} growth={10.08} />
-          <AccountsOverview />
+          <DashboardCard 
+          name='Ritji Ishaku'
+          id='12345'
+          profileImg='https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'
+          growth='10'
+          // balance={`{balance}`.toLocaleString()}
+          balance='12000'
+          Transfer= 'Transfer'
+          Withdraw='Withdraw'
+          
+          />
+          {/* I have changed the card to ensure reusability */}
+
+          {/* <UserInfo name="Ritji Ishaku" id="8327642732" />
+          <BalanceCard balance={3500000} growth={10.08} /> */}
+           <AccountsOverview />
         </div>
         {/* Right column */}
-        <div>
+        <div className='text-xs md:text-sm '> { /* We don't need this div */}
           <SavingsProgress monthlyIncome={50000} spent={14500} left={35500} totalSavings={1000} />
-        </div>
+        </div> 
       </div>
       
       {/* Search and sort section */}
