@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchAndSort = () => {
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
+    <div className="flex flex-col sm:flex-row justify-between items-center mb-4 overflow-hidden">
       {/* Search input and button */}
       <div className="flex w-full sm:w-auto mb-4 sm:mb-0">
         <input
