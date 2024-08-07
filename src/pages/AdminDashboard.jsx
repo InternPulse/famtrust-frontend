@@ -31,15 +31,15 @@ const AdminDashboard = () => {
 
           {/* <UserInfo name="Ritji Ishaku" id="8327642732" />
           <BalanceCard balance={3500000} growth={10.08} /> */}
-           <AccountsOverview />
         </div>
         {/* Right column */}
         <div className='text-xs md:text-sm '> { /* We don't need this div */}
           <SavingsProgress monthlyIncome={50000} spent={14500} left={35500} totalSavings={1000} />
         </div> 
       </div>
-      
+      <AccountsOverview />
       {/* Search and sort section */}
+          
       <div className="mb-8">
         <SearchAndSort />
       </div>

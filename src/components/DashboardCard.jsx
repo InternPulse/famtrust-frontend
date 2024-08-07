@@ -28,14 +28,14 @@ const DashboardCard = ({
       <p className="text-base text-green-600 mb-4 font-semibold">↑ {growth}%</p>
       </div>
       {/* Action buttons */}
-      <div className="flex justify-between font-semibold">
+      <div className="flex  font-semibold">
         {
-            Transfer? <button className="bg-sb-hover-text text-white px-4 py-2 rounded-lg hover:bg-blue-800">
+            Transfer? <button className="bg-sb-hover-text text-white mr-12 px-4 py-2 rounded-lg hover:bg-blue-800">
             {Transfer}
           </button>:''
         }
         {
-            Withdraw? <button className="bg-sb-hover-text text-white px-4 py-2 rounded-lg hover:bg-blue-800">
+            Withdraw? <button className="bg-darkerGrey  px-4 py-2 rounded-lg hover:bg-faint-blue">
             {Withdraw}
           </button>:''
         }

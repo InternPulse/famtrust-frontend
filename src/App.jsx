@@ -36,7 +36,7 @@ function App() {
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
               <AdminDashboard />
-              {/* <DashboardCard/> */}
+              
             </MainLayout>
           }
         />
