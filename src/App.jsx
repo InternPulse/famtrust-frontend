@@ -16,6 +16,9 @@ import Recovery from './pages/SIGNIN/Recovery';
 import AdminDashboard from './pages/AdminDashboard';
 import SubAcctDashboard from './pages/SubAcctDashboard';
 import DashboardCard from './components/DashboardCard';
+import FamilyAccessManagement from './pages/FamilyAccessMgt';
+import AdminFamilyTransaction from './pages/AdminFamTransact';
+import SubAcctTransaction from './pages/SubAcctFamTransact';
 
 
 function App() {
@@ -36,7 +39,7 @@ function App() {
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
               <AdminDashboard />
-              
+
             </MainLayout>
           }
         />
@@ -48,7 +51,7 @@ function App() {
             </MainLayout>
           }
         />
-        
+
         <Route
           path="/sub-account-list"
           element={
@@ -57,6 +60,32 @@ function App() {
             </MainLayout>
           }
         />
+        <Route
+          path="/family-access-management"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <FamilyAccessManagement />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/family-transaction-management"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <AdminFamilyTransaction />
+            </MainLayout>
+          }
+        />
+
+        <Route
+          path="/sub-account-transaction"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <AdminFamilyTransaction />
+            </MainLayout>
+          }
+        />
+
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/recovery" element={<Recovery />} />

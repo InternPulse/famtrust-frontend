@@ -12,12 +12,12 @@ const SearchAndSort = () => {
           placeholder="Search..."
           className="flex-grow p-2 border border-slate-200 rounded-lg"
         />
-        <button className="bg-blue-600 text-white mx-4 px-4 py-2 rounded-lg">
+        <button className="bg-blue-600 text-white mx-4 px-4 py-2 rounded-xl">
           Search
         </button>
       </div>
       {/* Sort dropdown */}
-      <select className="p-2 rounded-lg bg-darkerGrey text-blue-600">
+      <select className="px-4 py-3 rounded-xl bg-darkerGrey text-blue-600">
         <option>Sort by</option>
       </select>
     </div>

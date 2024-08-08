@@ -42,7 +42,7 @@ const TransList = ({ data, }) => {
             <div className=" px-4 my-2 ">{db.ID}</div>
             <div
               style={{
-                color: db.status === 'Approved' ? '#00710B' : '#C50016',
+                color: db.status === 'Completed' ? '#00710B' : '#C50016',
               }}
               className="truncate px-4 my-2 "
             >

@@ -28,14 +28,6 @@ const TopBar = () => {
       <h1 className="text-xl font-semibold">{activePage}</h1>
       <div className="flex items-center space-x-6">
         <div className="relative">
-          <input
-            type="text"
-            placeholder="Search"
-            className="border rounded-full py-2 px-4 w-64"
-          />
-        </div>
-        <AiOutlineBell className="text-2xl cursor-pointer" />
-        <div className="relative">
           <div onClick={toggleDropdown} className="flex items-center cursor-pointer space-x-2">
             <img src="/src/assets/Ellipse 1.png" alt="Profile" className="h-8 w-8 rounded-full" />
             <IoIosArrowDown />
