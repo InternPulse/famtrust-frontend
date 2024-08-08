@@ -14,6 +14,8 @@ import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
 import Header from './components/Header';
+import SubAcctfamTrans from './pages/SubAccountFamilyTrans/SubAcctfamTrans';
+import SuBAcctCreation from './pages/SubAcctCreation/SuBAcctCreation';
 
 function App() {
   return (
@@ -55,6 +57,10 @@ function App() {
             </MainLayout>
           }
         />
+        <Route path="/subacctfamiltrans" element={<SubAcctfamTrans/>}/>
+        <Route path="/subacctcreation" element={<SuBAcctCreation/>}/>
+
+        
         <Route
           path="/transaction-history"
           element={
