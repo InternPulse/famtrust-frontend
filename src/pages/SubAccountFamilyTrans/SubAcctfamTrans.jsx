@@ -1,4 +1,3 @@
-
 import Button from '../../components/Button'
 import ModalCardDetails from './ModalCardDetails'
 import ModalConfirmTrans from './ModalConfirmTrans'
@@ -38,7 +37,7 @@ const SubAcctfamTrans = () => {
         {nextModal === 1 && <ModalOtherTrans setShow={setShow}/>}
         {nextModal === 5 && <ModalVerification setShow={setShow}/>}
         {nextModal === 2 && <ModalTransType setShow={setShow}/>}
-        {/* {nextModal === 2 && <ModalWithdraw setShow={setShow}/>} */}
+        {nextModal === 2 && <ModalWithdraw setShow={setShow}/>}
         {/* {<ModalSubAcct setShow={setShow}/>} */}
       
 

@@ -13,7 +13,7 @@ const ModalWithdraw = () => {
       <div className="md:px-16 px-6 w-[60%] mx-auto bg-[#F9F8FF] py-3 border-[1px] border-[solid] border-[#E2E2E2] rounded my-10 text-base font-lato ">
         <div className="flex justify-between items-center">
           <h1 className="text-txtblue  font-lato text-3xl font-bold py-4">
-            Fund Your Wallet
+            Withdraw To Bank Account
           </h1>
           <div>
             <FaTimes />
