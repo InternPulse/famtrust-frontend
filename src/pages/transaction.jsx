@@ -12,7 +12,7 @@ const Transaction = () => {
     //   Description: 'Olawale Johanna',
     //   Category: 'Data',
     //   ID: 1001,
-    //   status: 'pending',
+    //   status: 'Pending',
     // },
     // {
     //   date: '10th july',
@@ -20,7 +20,7 @@ const Transaction = () => {
     //   Description: 'MTN Airtime',
     //   Category: 'Data',
     //   ID: 1002,
-    //   status: 'Approved',
+    //   status: 'Completed',
     // },
     // {
     //   date: '8th july',
@@ -28,7 +28,7 @@ const Transaction = () => {
     //   Description: 'Mustapha Glory',
     //   Category: 'Groceries',
     //   ID: 1003,
-    //   status: 'Approved',
+    //   status: 'Completed',
     // },
     // {
     //   date: '8th july',
@@ -44,7 +44,7 @@ const Transaction = () => {
     //   Description: 'John Chukwu',
     //   Category: 'Shopping',
     //   ID: 1005,
-    //   status: 'Approved',
+    //   status: 'Completed',
     // },
     // {
     //   date: '11th july',
@@ -52,7 +52,7 @@ const Transaction = () => {
     //   Description: 'Olawale Johanna',
     //   Category: 'Data',
     //   ID: 1001,
-    //   status: 'pending',
+    //   status: 'Pending',
     // },
     // {
     //   date: '10th july',
@@ -60,7 +60,7 @@ const Transaction = () => {
     //   Description: 'MTN Airtime',
     //   Category: 'Data',
     //   ID: 1002,
-    //   status: 'Approved',
+    //   status: 'Completed',
     // },
     // {
     //   date: '8th july',
@@ -68,7 +68,7 @@ const Transaction = () => {
     //   Description: 'Mustapha Glory',
     //   Category: 'Groceries',
     //   ID: 1003,
-    //   status: 'Approved',
+    //   status: 'Completed',
     // },
     // {
     //   date: '8th july',
@@ -84,7 +84,7 @@ const Transaction = () => {
     //   Description: 'John Chukwu',
     //   Category: 'Shopping',
     //   ID: 1005,
-    //   status: 'Approved',
+    //   status: 'Completed',
     // },
   ]);
   const [search, setSearch] = useState('');

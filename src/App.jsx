@@ -13,9 +13,17 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
+
 import Header from './components/Header';
 import SubAcctfamTrans from './pages/SubAccountFamilyTrans/SubAcctfamTrans';
 import SuBAcctCreation from './pages/SubAcctCreation/SuBAcctCreation';
+import AdminDashboard from './pages/AdminDashboard';
+import SubAcctDashboard from './pages/SubAcctDashboard';
+import DashboardCard from './components/DashboardCard';
+import FamilyAccessManagement from './pages/FamilyAccessMgt';
+import AdminFamilyTransaction from './pages/AdminFamTransact';
+import SubAcctTransaction from './pages/SubAcctFamTransact';
+
 
 function App() {
   return (
@@ -31,6 +39,24 @@ function App() {
           }
         />
         <Route
+          path="/dashboard"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <AdminDashboard />
+
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/sub-account-dashboard"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <SubAcctDashboard />
+            </MainLayout>
+          }
+        />
+
+        <Route
           path="/sub-account-list"
           element={
             <MainLayout showDashboardSidebar={true} showTopbar={true}>
@@ -38,6 +64,32 @@ function App() {
             </MainLayout>
           }
         />
+        <Route
+          path="/family-access-management"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <FamilyAccessManagement />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/family-transaction-management"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <AdminFamilyTransaction />
+            </MainLayout>
+          }
+        />
+
+        <Route
+          path="/sub-account-transaction"
+          element={
+            <MainLayout showDashboardSidebar={true} showTopbar={true}>
+              <AdminFamilyTransaction />
+            </MainLayout>
+          }
+        />
+
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/recovery" element={<Recovery />} />
