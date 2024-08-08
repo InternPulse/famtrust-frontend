@@ -40,7 +40,8 @@ module.exports = {
               
       },
       backgroundImage:{
-        "bg": "url('/herobg.png')"
+        "bg": "url('/herobg.png')",
+        "bgg": "url('/Ellipse.png)"
       },
       backgroundColor: {
         "bluey": "#4567F7",

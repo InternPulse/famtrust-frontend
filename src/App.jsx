@@ -13,6 +13,10 @@ import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/SIGNIN/LoginPage';
 import SignUpPage from './pages/SIGNUP/SignUpPage';
 import Recovery from './pages/SIGNIN/Recovery';
+
+import Header from './components/Header';
+import SubAcctfamTrans from './pages/SubAccountFamilyTrans/SubAcctfamTrans';
+import SuBAcctCreation from './pages/SubAcctCreation/SuBAcctCreation';
 import AdminDashboard from './pages/AdminDashboard';
 import SubAcctDashboard from './pages/SubAcctDashboard';
 import DashboardCard from './components/DashboardCard';
@@ -105,6 +109,10 @@ function App() {
             </MainLayout>
           }
         />
+        <Route path="/subacctfamiltrans" element={<SubAcctfamTrans/>}/>
+        <Route path="/subacctcreation" element={<SuBAcctCreation/>}/>
+
+        
         <Route
           path="/transaction-history"
           element={
