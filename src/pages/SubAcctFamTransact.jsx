@@ -17,13 +17,13 @@ const SubAcctTransaction = () => {
         {/* Left column */}
         <div className="space-y-6">
           <DashboardCard 
-          name='Ritji Ishaku'
+          name='Shalom Kanu'
           id='12345'
           profileImg='https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'
           growth='10'
           // balance={`{balance}`.toLocaleString()}
           balance='12000'
-          Transfer= 'Initiate New Transaction'        
+          SubacctTransfer= 'Initiate New Transaction'        
           />
           {/* I have changed the card to ensure reusability */}
 

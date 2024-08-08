@@ -7,7 +7,9 @@ const DashboardCard = ({
     growth, 
     Transfer, 
     Withdraw, 
-    balance
+    balance,
+    SubacctTransfer,
+    RequestFunds
 }) => {
   return (
     <div className=' shadow rounded-lg py-8 px-8'>
@@ -29,6 +31,7 @@ const DashboardCard = ({
       </div>
       {/* Action buttons */}
       <div className="flex  font-semibold">
+        {/* Button for Admin transactions */}
         {
             Transfer? <button className="bg-sb-hover-text text-white mr-12 px-4 py-2 rounded-lg hover:bg-blue-800">
             {Transfer}
@@ -37,6 +40,17 @@ const DashboardCard = ({
         {
             Withdraw? <button className="bg-darkerGrey  px-4 py-2 rounded-lg hover:bg-faint-blue">
             {Withdraw}
+          </button>:''
+        }
+        {/* Button for sub acccount transactions */}
+        {
+            SubacctTransfer? <button className="bg-sb-hover-text text-white mr-12 px-4 py-2 rounded-lg hover:bg-blue-800">
+            {SubacctTransfer}
+          </button>:''
+        }
+        {
+            RequestFunds? <button className="bg-darkerGrey  px-4 py-2 rounded-lg hover:bg-faint-blue">
+            {RequestFunds}
           </button>:''
         }
       </div>

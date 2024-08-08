@@ -12,7 +12,7 @@ const BalanceCard = ({ balance, growth }) => {
             {/* Action buttons */}
             <div className="flex justify-between font-semibold">
                 <button className="bg-sb-hover-text text-white px-4 py-2 rounded-lg hover:bg-blue-800">
-                    Add Funds
+                    Transfer Funds
                 </button>
                 <button className="bg-darkerGrey text-text-color px-4 py-2 rounded-lg hover:bg-faint-blue">
                     Request Funds
