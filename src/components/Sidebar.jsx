@@ -59,10 +59,10 @@ const Sidebar = () => {
         {
             icon: <RiTeamLine />,
             label: 'Family Account Management',
-            href: '/fund-request',
+            href: '/family-access-management',
             subItems: [
-                { icon: <RxDashboard />, label: 'Family Access Management', href: '/family_access_management' },
-                { icon: <RxDashboard />, label: 'Family Transaction Management', href: '/family_transaction_management' },
+                { icon: <RxDashboard />, label: 'Family Access Management', href: '/family-access-management' },
+                { icon: <RxDashboard />, label: 'Family Transaction Management', href: '/family-transaction-management' },
             ]
         },
         // {
