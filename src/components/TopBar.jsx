@@ -1,10 +1,11 @@
 import React from 'react';
+import ProfileImage from '../assets/Ellipse1.png';
 
 // Declared user object
 const user = {
   firstName: "Ritji",
   lastName: "Ishaku",
-  profilePicture: "/src/assets/Ellipse 1.png"
+  profilePicture: ProfileImage
 };
 
 const TopBar = () => {
