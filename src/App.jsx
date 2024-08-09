@@ -16,16 +16,16 @@ import Recovery from './pages/SIGNIN/Recovery';
 
 import Header from './components/Header';
 import SubAcctfamTrans from './pages/SubAccountFamilyTrans/SubAcctfamTrans';
-import SuBAcctCreation from './pages/SubAcctCreation/SuBAcctCreation';
+// import SuBAcctCreation from './pages/SubAcctCreation/SuBAcctCreation';
 import AdminDashboard from './pages/AdminDashboard';
 import SubAcctDashboard from './pages/SubAcctDashboard';
 import DashboardCard from './components/DashboardCard';
 import FamilyAccessManagement from './pages/FamilyAccessMgt';
 import AdminFamilyTransaction from './pages/AdminFamTransact';
 import SubAcctTransaction from './pages/SubAcctFamTransact';
-import Created from './pages/SubAcctCreation/';
-import ModalCreateNewSub from './pages/SubAcctCreation';
-import SignUpForm from './pages/SubAcctCreation';
+// import Created from './pages/SubAcctCreation/';
+// import ModalCreateNewSub from './pages/SubAcctCreation';
+// import SignUpForm from './pages/SubAcctCreation';
 
 function App() {
   return (
@@ -110,13 +110,13 @@ function App() {
             </MainLayout>
           }
         />
-        <Route path="/subacctfamiltrans" element={<SubAcctfamTrans />} />
-        <Route path="/subacctcreation" element={<SuBAcctCreation />} />
+        {/* <Route path="/subacctfamiltrans" element={<SubAcctfamTrans />} />
+        <Route path="/subacctcreation" element={<SuBAcctCreation />} /> */}
 
-        <Route path="/sign-upForm.jsx" element={<SignUpForm />} />
+        {/* <Route path="/sign-upForm.jsx" element={<SignUpForm />} />
         <Route path="/ModalCreateNewSub.jsx" element={<ModalCreateNewSub />} />
         <Route path="/SuBAcctCreation.jsx" element={<SuBAcctCreation />} />
-        <Route path="/created.jsx" element={<Created />} />
+        <Route path="/created.jsx" element={<Created />} /> */}
 
         <Route
           path="/transaction-history"

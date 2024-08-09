@@ -101,7 +101,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className={`bg-sb-bg text-sb-text-color ${isSmallScreen ? 'w-16' : 'w-1/4'} h-full fixed flex flex-col items-center font-bold transition-all duration-300`}>
+        <div className={`bg-sb-bg text-sb-text-color ${isSmallScreen ? 'w-1/6' : 'w-1/4'} h-full fixed flex flex-col items-center font-bold transition-all duration-300`}>
             {/* Logo section */}
             <div className="w-full text-center">
                 {isSmallScreen ? (
