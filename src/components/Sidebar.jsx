@@ -126,7 +126,7 @@ const Sidebar = () => {
                         {/* Menu item */}
                         <div className={`flex ${isSmallScreen ? 'justify-center' : 'justify-between'} items-center cursor-pointer hover:text-sb-hover-text hover:bg-sb-hover-bg hover:rounded hover:px-2.5 hover:py-2 ${isSmallScreen ? '' : 'lg:space-x-16'}`}>
                             <ul className={`flex items-center ${isSmallScreen ? 'justify-center' : 'space-x-2'}`}>
-                                <li className={isSmallScreen ? 'text-2xl' : ''}>{item.icon}</li>
+                                <li className={isSmallScreen ? 'text-2xl' : ''}><a href={item.href}>{item.icon}</a></li>
                                 {/* Show label on medium and large screens */}
                                 {!isSmallScreen && <li><a href={item.href}>{item.label}</a></li>}
                             </ul>

@@ -8,7 +8,7 @@ const SavingsProgress = ({ monthlyIncome, spent, left, totalSavings }) => {
     <div className=" bg-white p-4 rounded-lg shadow">
       {/* New progress bar */}
       <div className="flex">
-      <div className="w-32 flex justify-center items-center relative">
+      <div className="w-32 flex justify-center items-center">
       <CircularProgressbar
             value={75}
             styles={buildStyles({
@@ -23,7 +23,7 @@ const SavingsProgress = ({ monthlyIncome, spent, left, totalSavings }) => {
             <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" 
             width={50}
             height={50}
-            className='rounded-full '
+            className='rounded-full'
             alt="" />
             </div>
       </div>
