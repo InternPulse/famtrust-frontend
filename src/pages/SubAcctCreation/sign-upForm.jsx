@@ -1,15 +1,22 @@
 import { RxCross1 } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
+import ModalCreateNewSub from './ModalCreateNewSub';
+import { useState } from 'react';
+useState;
 
 const SignUpForm = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="flex justify-center items-center">
       <div className="py-[32px] px-4 mx-auto lg:w-[700px]  w-3/4 bg-primary-white pt-4 border-2 border-secondary-grey3 my-10 rounded-xl text-base font-lato ">
         <div className=" flex items-center justify-between  my-10 mb-10">
-          <h2 className="text-3xl  text-primary-blue font-semibold ">
+          <h2 className="text-3xl  text-primary-blue font-semibold mr-4 ">
             Complete Sign Up Form
           </h2>
-          <RxCross1 />
+          <button>
+            <RxCross1 />
+          </button>
         </div>
         <form className="text-sm px-3" action="">
           <label htmlFor="">Firstname</label>
@@ -56,13 +63,20 @@ const SignUpForm = () => {
           />
           <div className="flex justify-between mt-8 my-4">
             <button className="p-2 px-3 border bg-secondary-grey3 rounded-lg">
-             <Link to='/'>Reject Onboarding</Link> 
+              <Link to="/">Reject Onboarding</Link>
             </button>
-            <button className="p-2 px-3 border bg-primary-blue text-white rounded-lg">
-              <Link to="/ModalCreateNewSub.jsx">Complete sign-up</Link> 
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="p-2 px-3 border ml-4 bg-primary-blue text-white rounded-lg"
+            >
+              <Link >Complete sign-up</Link>
             </button>
           </div>
         </form>
+        <ModalCreateNewSub
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
     </div>
   );

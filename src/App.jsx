@@ -23,9 +23,10 @@ import DashboardCard from './components/DashboardCard';
 import FamilyAccessManagement from './pages/FamilyAccessMgt';
 import AdminFamilyTransaction from './pages/AdminFamTransact';
 import SubAcctTransaction from './pages/SubAcctFamTransact';
-import Created from './pages/SubAcctCreation/';
-import ModalCreateNewSub from './pages/SubAcctCreation';
-import SignUpForm from './pages/SubAcctCreation';
+import Created from './pages/SubAcctCreation/created';
+import ModalCreateNewSub from './pages/SubAcctCreation/ModalCreateNewSub';
+import SignUpForm from './pages/SubAcctCreation/sign-upForm';
+import SubAcctCreation from './pages/SubAcctCreation/SuBAcctCreation';
 
 function App() {
   return (
@@ -115,7 +116,7 @@ function App() {
 
         <Route path="/sign-upForm.jsx" element={<SignUpForm />} />
         <Route path="/ModalCreateNewSub.jsx" element={<ModalCreateNewSub />} />
-        <Route path="/SuBAcctCreation.jsx" element={<SuBAcctCreation />} />
+        <Route path="/SuBAcctCreation.jsx" element={<SubAcctCreation />} />
         <Route path="/created.jsx" element={<Created />} />
 
         <Route
